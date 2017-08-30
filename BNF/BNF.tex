@@ -1,0 +1,100 @@
+
+\documentclass[a4paper,12pt]{letter}%
+
+\usepackage{amsmath}%
+\usepackage{amsfonts}%
+\usepackage{amssymb}%
+\usepackage{graphicx}
+\usepackage{listings}
+%
+\usepackage{t1enc}
+\usepackage[latin2]{inputenc}
+%---- Setting the margins
+%
+\setlength{\textwidth}{160mm}%
+\setlength{\hoffset}{-0.4mm}%
+\setlength{\oddsidemargin}{0mm}%
+\setlength{\topskip}{0mm}%
+\setlength{\textheight}{240mm}%
+\setlength{\topmargin}{0mm}%
+\setlength{\voffset}{-5.4mm}
+%
+%-------------------------------------------------------------
+%
+\name{Bibliograf\'ia}%
+\address{Instituto Polit\'ecnico Nacional\\
+         Escuela Superior de C\'omputo\\
+         Grupo 2CM4\\
+         Teor\'ia Computacional\\
+				Nava Vivas Ana Paola\\
+				\hrulefill}
+
+%-------------------------------------------------------------
+\begin{document}
+\begin{letter}%
+{If statements, with BNF notation\\
+}
+\opening{}
+
+
+
+\lstset{breaklines=true, basicstyle=\footnotesize}
+\begin{lstlisting}[frame=single]
+<if_else_example>::=   
+  if <condition> then {
+    if <condition> then{
+      if <condition> then{
+        if <condition> then{
+          if <condition> then{
+            if <condition> then{
+              if <condition> then{
+                if <condition> then{
+                  if <condition> then{
+                    if<condition> then{<statement>}
+                   [else<statement>]}
+                 [else<statement>]}
+               [else<statement>]}
+             [else<statement>]}
+           [else<statement>]}
+         [else<statement>]}
+       [else<statement>]}
+     [else<statement>]}
+   [else<statement>]}
+  [else<statement>]
+\end{lstlisting}
+
+
+
+
+
+%\begin{enumerate}
+ % \item 
+
+
+
+%\end{enumerate}
+
+
+
+\begin{lstlisting}
+
+\end{lstlisting}
+\begin{lstlisting}
+
+\end{lstlisting}
+\begin{lstlisting}
+
+\end{lstlisting}
+
+
+\closing{   } \vspace{5mm}%
+
+
+\begin{lstlisting}
+http://infolab.stanford.edu/~ullman/ialc/spr10/slides/cfl1.pdf
+
+https://www.youtube.com/watch?v=2OD9XVVXMFA
+\end{lstlisting}
+
+\end{letter}
+\end{document}
