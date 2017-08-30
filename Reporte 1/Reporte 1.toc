@@ -1,0 +1,23 @@
+\select@language {spanish}
+\contentsline {chapter}{\numberline {1}Potencia de alfabeto}{3}
+\contentsline {section}{\numberline {1.1}Descripci\'on del programa 1}{3}
+\contentsline {section}{\numberline {1.2}C\'odigo del programa 1}{3}
+\contentsline {section}{\numberline {1.3}Resultados del programa 1}{5}
+\contentsline {chapter}{\numberline {2}Primos en Binario}{7}
+\contentsline {section}{\numberline {2.1}Descripci\'on del segundo programa}{7}
+\contentsline {section}{\numberline {2.2}C\'odigo del segundo programa}{7}
+\contentsline {section}{\numberline {2.3}Resultados del programa 2}{9}
+\contentsline {section}{\numberline {2.4}Ocurrencias de ceros y unos}{9}
+\contentsline {chapter}{\numberline {3}Terminaciones en Ere}{12}
+\contentsline {section}{\numberline {3.1}Descripci\'on del programa 3}{12}
+\contentsline {section}{\numberline {3.2}C\'odigo del tercer programa}{12}
+\contentsline {chapter}{\numberline {4}Paridad}{14}
+\contentsline {section}{\numberline {4.1}Descripci\'on del programa 4}{14}
+\contentsline {section}{\numberline {4.2}C\'odigo del cuarto programa}{14}
+\contentsline {section}{\numberline {4.3}Resultados del programa 4}{18}
+\contentsline {section}{\numberline {4.4}Gr\'afico del programa 4}{18}
+\contentsline {chapter}{\numberline {5}Protocolo}{20}
+\contentsline {section}{\numberline {5.1}Descripci\'on del programa 5}{20}
+\contentsline {section}{\numberline {5.2}C\'odigo del quinto programa}{20}
+\contentsline {section}{\numberline {5.3}Resultados del programa 5}{22}
+\contentsline {section}{\numberline {5.4}Gr\'afico del programa 5}{22}

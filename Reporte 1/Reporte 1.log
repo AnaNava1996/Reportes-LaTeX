@@ -1,0 +1,804 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.9.11)  12 SEP 2016 00:52
+entering extended mode
+**"./Reporte 1.tex"
+("Reporte 1.tex"
+LaTeX2e <2016/03/31> patch level 3
+Babel <3.9r> and hyphenation patterns for 75 language(s) loaded.
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\report.cls"
+Document Class: report 2014/09/29 v1.4h Standard LaTeX document class
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\size10.clo"
+File: size10.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
+)
+\c@part=\count79
+\c@chapter=\count80
+\c@section=\count81
+\c@subsection=\count82
+\c@subsubsection=\count83
+\c@paragraph=\count84
+\c@subparagraph=\count85
+\c@figure=\count86
+\c@table=\count87
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+) ("C:\Program Files\MiKTeX 2.9\tex\generic\babel\babel.sty"
+Package: babel 2016/04/23 3.9r The Babel package
+
+*************************************
+* Local config file bblopts.cfg used
+*
+("C:\Program Files\MiKTeX 2.9\tex\latex\arabi\bblopts.cfg"
+File: bblopts.cfg 2005/09/08 v0.1 add Arabic and Farsi to "declared" options of babel
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\babel-spanish\spanish.ldf"
+Language: spanish.ldf 2016/03/03 v5.0p Spanish support from the babel system
+
+("C:\Program Files\MiKTeX 2.9\tex\generic\babel\babel.def"
+File: babel.def 2016/04/23 3.9r Babel common definitions
+\babel@savecnt=\count88
+\U@D=\dimen103
+)
+\es@quottoks=\toks14
+\es@quotdepth=\count89
+Package babel Info: Making " an active character on input line 561.
+Package babel Info: Making . an active character on input line 662.
+Package babel Info: Making < an active character on input line 707.
+Package babel Info: Making > an active character on input line 707.
+Package babel Info: Making ' an active character on input line 725.
+)) ("C:\Program Files\MiKTeX 2.9\tex\latex\base\fontenc.sty"
+Package: fontenc 2016/06/19 v1.99m Standard LaTeX package
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\t1enc.def"
+File: t1enc.def 2016/06/19 v1.99m Standard LaTeX file
+LaTeX Font Info:    Redeclaring font encoding T1 on input line 48.
+)) ("C:\Program Files\MiKTeX 2.9\tex\latex\base\inputenc.sty"
+Package: inputenc 2015/03/17 v1.2c Input encoding file
+\inpenc@prehook=\toks15
+\inpenc@posthook=\toks16
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\ansinew.def"
+File: ansinew.def 2015/03/17 v1.2c Input encoding file
+))
+("C:\Program Files\MiKTeX 2.9\tex\latex\mathtools\mathtools.sty"
+Package: mathtools 2015/11/12 v1.18 mathematical typesetting tools
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\keyval.sty"
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks17
+) ("C:\Program Files\MiKTeX 2.9\tex\latex\tools\calc.sty"
+Package: calc 2014/10/28 v4.3 Infix arithmetic (KKT,FJ)
+\calc@Acount=\count90
+\calc@Bcount=\count91
+\calc@Adimen=\dimen104
+\calc@Bdimen=\dimen105
+\calc@Askip=\skip43
+\calc@Bskip=\skip44
+LaTeX Info: Redefining \setlength on input line 80.
+LaTeX Info: Redefining \addtolength on input line 81.
+\calc@Ccount=\count92
+\calc@Cskip=\skip45
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\mathtools\mhsetup.sty"
+Package: mhsetup 2010/01/21 v1.2a programming setup (MH)
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsmath.sty"
+Package: amsmath 2016/06/28 v2.15d AMS math features
+\@mathmargin=\skip46
+
+For additional information on amsmath, use the `?' option.
+("C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amstext.sty"
+Package: amstext 2000/06/29 v2.01 AMS text
+ ("C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsgen.sty"
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks18
+\ex@=\dimen106
+)) ("C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsbsy.sty"
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen107
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsopn.sty"
+Package: amsopn 2016/03/08 v2.02 operator names
+)
+\inf@bad=\count93
+LaTeX Info: Redefining \frac on input line 199.
+\uproot@=\count94
+\leftroot@=\count95
+LaTeX Info: Redefining \overline on input line 297.
+\classnum@=\count96
+\DOTSCASE@=\count97
+LaTeX Info: Redefining \ldots on input line 394.
+LaTeX Info: Redefining \dots on input line 397.
+LaTeX Info: Redefining \cdots on input line 518.
+\Mathstrutbox@=\box26
+\strutbox@=\box27
+\big@size=\dimen108
+LaTeX Font Info:    Redeclaring font encoding OML on input line 634.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 635.
+\macc@depth=\count98
+\c@MaxMatrixCols=\count99
+\dotsspace@=\muskip10
+\c@parentequation=\count100
+\dspbrk@lvl=\count101
+\tag@help=\toks19
+\row@=\count102
+\column@=\count103
+\maxfields@=\count104
+\andhelp@=\toks20
+\eqnshift@=\dimen109
+\alignsep@=\dimen110
+\tagshift@=\dimen111
+\tagwidth@=\dimen112
+\totwidth@=\dimen113
+\lineht@=\dimen114
+\@envbody=\toks21
+\multlinegap=\skip47
+\multlinetaggap=\skip48
+\mathdisplay@stack=\toks22
+LaTeX Info: Redefining \[ on input line 2739.
+LaTeX Info: Redefining \] on input line 2740.
+)
+LaTeX Info: Thecontrolsequence`\('isalreadyrobust on input line 129.
+LaTeX Info: Thecontrolsequence`\)'isalreadyrobust on input line 129.
+LaTeX Info: Thecontrolsequence`\['isalreadyrobust on input line 129.
+LaTeX Info: Thecontrolsequence`\]'isalreadyrobust on input line 129.
+\g_MT_multlinerow_int=\count105
+\l_MT_multwidth_dim=\dimen115
+\origjot=\skip49
+\l_MT_shortvdotswithinadjustabove_dim=\dimen116
+\l_MT_shortvdotswithinadjustbelow_dim=\dimen117
+\l_MT_above_intertext_sep=\dimen118
+\l_MT_below_intertext_sep=\dimen119
+\l_MT_above_shortintertext_sep=\dimen120
+\l_MT_below_shortintertext_sep=\dimen121
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\listings\listings.sty"
+\lst@mode=\count106
+\lst@gtempboxa=\box28
+\lst@token=\toks23
+\lst@length=\count107
+\lst@currlwidth=\dimen122
+\lst@column=\count108
+\lst@pos=\count109
+\lst@lostspace=\dimen123
+\lst@width=\dimen124
+\lst@newlines=\count110
+\lst@lineno=\count111
+\lst@maxwidth=\dimen125
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\listings\lstmisc.sty"
+File: lstmisc.sty 2015/06/04 1.6 (Carsten Heinz)
+\c@lstnumber=\count112
+\lst@skipnumbers=\count113
+\lst@framebox=\box29
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\listings\listings.cfg"
+File: listings.cfg 2015/06/04 1.6 listings configuration
+))
+Package: listings 2015/06/04 1.6 (Carsten Heinz)
+ ("C:\Program Files\MiKTeX 2.9\tex\latex\lm\lmodern.sty"
+Package: lmodern 2009/10/30 v1.6 Latin Modern Fonts
+LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
+(Font)                  OT1/cmr/m/n --> OT1/lmr/m/n on input line 22.
+LaTeX Font Info:    Overwriting symbol font `letters' in version `normal'
+(Font)                  OML/cmm/m/it --> OML/lmm/m/it on input line 23.
+LaTeX Font Info:    Overwriting symbol font `symbols' in version `normal'
+(Font)                  OMS/cmsy/m/n --> OMS/lmsy/m/n on input line 24.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `normal'
+(Font)                  OMX/cmex/m/n --> OMX/lmex/m/n on input line 25.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
+(Font)                  OT1/cmr/bx/n --> OT1/lmr/bx/n on input line 26.
+LaTeX Font Info:    Overwriting symbol font `letters' in version `bold'
+(Font)                  OML/cmm/b/it --> OML/lmm/b/it on input line 27.
+LaTeX Font Info:    Overwriting symbol font `symbols' in version `bold'
+(Font)                  OMS/cmsy/b/n --> OMS/lmsy/b/n on input line 28.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `bold'
+(Font)                  OMX/cmex/m/n --> OMX/lmex/m/n on input line 29.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
+(Font)                  OT1/cmr/bx/n --> OT1/lmr/bx/n on input line 31.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
+(Font)                  OT1/cmss/m/n --> OT1/lmss/m/n on input line 32.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
+(Font)                  OT1/cmr/m/it --> OT1/lmr/m/it on input line 33.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
+(Font)                  OT1/cmtt/m/n --> OT1/lmtt/m/n on input line 34.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
+(Font)                  OT1/cmr/bx/n --> OT1/lmr/bx/n on input line 35.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
+(Font)                  OT1/cmss/bx/n --> OT1/lmss/bx/n on input line 36.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
+(Font)                  OT1/cmr/bx/it --> OT1/lmr/bx/it on input line 37.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
+(Font)                  OT1/cmtt/m/n --> OT1/lmtt/m/n on input line 38.
+) ("C:\Program Files\MiKTeX 2.9\tex\latex\bera\beramono.sty"
+Package: beramono 2004/01/31 (WaS)
+) ("C:\Program Files\MiKTeX 2.9\tex\latex\caption\caption.sty"
+Package: caption 2016/02/21 v3.3-144 Customizing captions (AR)
+ ("C:\Program Files\MiKTeX 2.9\tex\latex\caption\caption3.sty"
+Package: caption3 2016/05/22 v1.7-166 caption3 kernel (AR)
+Package caption3 Info: TeX engine: e-TeX on input line 67.
+\captionmargin=\dimen126
+\captionmargin@=\dimen127
+\captionwidth=\dimen128
+\caption@tempdima=\dimen129
+\caption@indent=\dimen130
+\caption@parindent=\dimen131
+\caption@hangindent=\dimen132
+)
+\c@ContinuedFloat=\count114
+Package caption Info: listings package is loaded.
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\graphicx.sty"
+Package: graphicx 2014/10/28 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\graphics.sty"
+Package: graphics 2016/07/10 v1.0t Standard LaTeX Graphics (DPC,SPQR)
+ ("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\trig.sty"
+Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
+) ("C:\Program Files\MiKTeX 2.9\tex\latex\00miktex\graphics.cfg"
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 99.
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics-def\pdftex.def"
+File: pdftex.def 2016/07/10 v0.06j Graphics/color for pdfTeX
+
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\infwarerr.sty"
+Package: infwarerr 2016/05/16 v1.4 Providing info/warning/error messages (HO)
+)
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\ltxcmds.sty"
+Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
+)
+\Gread@gobject=\count115
+))
+\Gin@req@height=\dimen133
+\Gin@req@width=\dimen134
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\subfig\subfig.sty"
+Package: subfig 2005/06/28 ver: 1.3 subfig package
+\c@KVtest=\count116
+\sf@farskip=\skip50
+\sf@captopadj=\dimen135
+\sf@capskip=\skip51
+\sf@nearskip=\skip52
+\c@subfigure=\count117
+\c@subfigure@save=\count118
+\c@lofdepth=\count119
+\c@subtable=\count120
+\c@subtable@save=\count121
+\c@lotdepth=\count122
+\sf@top=\skip53
+\sf@bottom=\skip54
+) ("C:\Program Files\MiKTeX 2.9\tex\latex\amscls\amsthm.sty"
+Package: amsthm 2015/03/04 v2.20.2
+\thm@style=\toks24
+\thm@bodyfont=\toks25
+\thm@headfont=\toks26
+\thm@notefont=\toks27
+\thm@headpunct=\toks28
+\thm@preskip=\skip55
+\thm@postskip=\skip56
+\thm@headsep=\skip57
+\dth@everypar=\toks29
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\amsfonts.sty"
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+) ("Reporte 1.aux"
+LaTeX Info: Redefining \. on input line 7.
+LaTeX Info: Redefining \% on input line 7.
+
+
+LaTeX Warning: Label `dividing' multiply defined.
+
+
+LaTeX Warning: Label `hints' multiply defined.
+
+
+LaTeX Warning: Label `dividing' multiply defined.
+
+
+LaTeX Warning: Label `dividing' multiply defined.
+
+
+LaTeX Warning: Label `dividing' multiply defined.
+
+
+LaTeX Warning: Label `dividing' multiply defined.
+
+
+LaTeX Warning: Label `hints' multiply defined.
+
+
+LaTeX Warning: Label `dividing' multiply defined.
+
+
+LaTeX Warning: Label `dividing' multiply defined.
+
+
+LaTeX Warning: Label `hints' multiply defined.
+
+
+LaTeX Warning: Label `dividing' multiply defined.
+
+
+LaTeX Warning: Label `dividing' multiply defined.
+
+
+LaTeX Warning: Label `dividing' multiply defined.
+
+
+LaTeX Warning: Label `dividing' multiply defined.
+
+
+LaTeX Warning: Label `hints' multiply defined.
+
+
+LaTeX Warning: Label `dividing' multiply defined.
+
+
+LaTeX Warning: Label `dividing' multiply defined.
+
+
+LaTeX Warning: Label `dividing' multiply defined.
+
+
+LaTeX Warning: Label `dividing' multiply defined.
+
+)
+\openout1 = `"Reporte 1.aux"'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 88.
+LaTeX Font Info:    ... okay on input line 88.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 88.
+LaTeX Font Info:    ... okay on input line 88.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 88.
+LaTeX Font Info:    ... okay on input line 88.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 88.
+LaTeX Font Info:    ... okay on input line 88.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 88.
+LaTeX Font Info:    ... okay on input line 88.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 88.
+LaTeX Font Info:    ... okay on input line 88.
+LaTeX Font Info:    Try loading font information for T1+lmr on input line 88.
+ ("C:\Program Files\MiKTeX 2.9\tex\latex\lm\t1lmr.fd"
+File: t1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+LaTeX Info: Redefining \. on input line 88.
+LaTeX Info: Redefining \% on input line 88.
+\c@lstlisting=\count123
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: subfig package v1.3 is loaded.
+Package caption Info: End \AtBeginDocument code.
+ ("C:\Program Files\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count124
+\scratchdimen=\dimen136
+\scratchbox=\box30
+\nofMPsegments=\count125
+\nofMParguments=\count126
+\everyMPshowfont=\toks30
+\MPscratchCnt=\count127
+\MPscratchDim=\dimen137
+\MPnumerator=\count128
+\makeMPintoPDFobject=\count129
+\everyMPtoPDFconversion=\toks31
+) ("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\pdftexcmds.sty"
+Package: pdftexcmds 2016/05/21 v0.22 Utility functions of pdfTeX for LuaTeX (HO)
+
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\ifluatex.sty"
+Package: ifluatex 2016/05/16 v1.4 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+)
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\ifpdf.sty"
+Package: ifpdf 2016/05/14 v3.1 Provides the ifpdf switch
+)
+Package pdftexcmds Info: LuaTeX not detected.
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\epstopdf-base.sty"
+Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\grfext.sty"
+Package: grfext 2016/05/16 v1.2 Manage graphics extensions (HO)
+
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\kvdefinekeys.sty"
+Package: kvdefinekeys 2016/05/16 v1.4 Define keys (HO)
+))
+("C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\kvoptions.sty"
+Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
+
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\kvsetkeys.sty"
+Package: kvsetkeys 2016/05/16 v1.17 Key value parser (HO)
+
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\etexcmds.sty"
+Package: etexcmds 2016/05/16 v1.6 Avoid name clashes with e-TeX commands (HO)
+Package etexcmds Info: Could not find \expanded.
+(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
+(etexcmds)             that some package has redefined \expanded.
+(etexcmds)             In the latter case, load this package earlier.
+)))
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 438.
+Package grfext Info: Graphics extension search list:
+(grfext)             [.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPEG,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 456.
+)
+LaTeX Font Info:    Try loading font information for OT1+lmr on input line 99.
+ ("C:\Program Files\MiKTeX 2.9\tex\latex\lm\ot1lmr.fd"
+File: ot1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+LaTeX Font Info:    Try loading font information for OML+lmm on input line 99.
+ ("C:\Program Files\MiKTeX 2.9\tex\latex\lm\omllmm.fd"
+File: omllmm.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 99.
+ ("C:\Program Files\MiKTeX 2.9\tex\latex\lm\omslmsy.fd"
+File: omslmsy.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+LaTeX Font Info:    Try loading font information for OMX+lmex on input line 99.
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\lm\omxlmex.fd"
+File: omxlmex.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <12> on input line 99.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <8> on input line 99.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <6> on input line 99.
+LaTeX Font Info:    Try loading font information for U+msa on input line 99.
+ ("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Try loading font information for U+msb on input line 99.
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+) [1
+
+{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}]
+[2
+
+]
+Cap\'{\i }tulo 1.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <10> on input line 128.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <7> on input line 128.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <5> on input line 128.
+
+Overfull \hbox (57.00409pt too wide) in paragraph at lines 152--153
+[][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+LaTeX Font Info:    Try loading font information for OMS+lmr on input line 157.
+("C:\Program Files\MiKTeX 2.9\tex\latex\lm\omslmr.fd"
+File: omslmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+LaTeX Font Info:    Font shape `OMS/lmr/m/n' in size <10> not available
+(Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 157.
+ [3
+
+]
+Overfull \hbox (15.00366pt too wide) in paragraph at lines 173--174
+[][][][][][][][][][][][][] 
+ []
+
+[4] <manualuniverso.png, id=22, 511.15968pt x 261.22594pt>
+File: manualuniverso.png Graphic file (type png)
+ <use manualuniverso.png>
+Package pdftex.def Info: manualuniverso.png used on input line 227.
+(pdftex.def)             Requested size: 345.0pt x 176.30792pt.
+
+<Automaticouniverso.png, id=24, 505.13719pt x 544.28343pt>
+File: Automaticouniverso.png Graphic file (type png)
+ <use Automaticouniverso.png>
+Package pdftex.def Info: Automaticouniverso.png used on input line 234.
+(pdftex.def)             Requested size: 345.0pt x 371.74394pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[5 <./manualuniverso.png>] [6 <./Automaticouniverso.png>]
+Cap\'{\i }tulo 2.
+[7
+
+]
+Overfull \hbox (27.00378pt too wide) in paragraph at lines 272--273
+[][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (57.00409pt too wide) in paragraph at lines 289--290
+[][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (39.0039pt too wide) in paragraph at lines 290--291
+[][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (39.0039pt too wide) in paragraph at lines 294--295
+[][][][][][][][][][][][][] 
+ []
+
+[8] <primosmanual.png, id=39, 506.6428pt x 255.95625pt>
+File: primosmanual.png Graphic file (type png)
+ <use primosmanual.png>
+Package pdftex.def Info: primosmanual.png used on input line 357.
+(pdftex.def)             Requested size: 345.0pt x 174.2979pt.
+ [9 <./primosmanual.png>]
+<primosautomatico.png, id=43, 507.39563pt x 253.69781pt>
+File: primosautomatico.png Graphic file (type png)
+ <use primosautomatico.png>
+Package pdftex.def Info: primosautomatico.png used on input line 364.
+(pdftex.def)             Requested size: 345.0pt x 172.50449pt.
+
+<Ocurrencias.png, id=44, 307.90031pt x 402.75468pt>
+File: Ocurrencias.png Graphic file (type png)
+ <use Ocurrencias.png>
+Package pdftex.def Info: Ocurrencias.png used on input line 375.
+(pdftex.def)             Requested size: 345.0pt x 451.31569pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[10 <./primosautomatico.png>] [11 <./Ocurrencias.png>]
+Cap\'{\i }tulo 3.
+
+Overfull \hbox (135.00488pt too wide) in paragraph at lines 396--397
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
+ []
+
+
+Overfull \hbox (219.00574pt too wide) in paragraph at lines 401--402
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+[12
+
+]
+Overfull \hbox (51.00403pt too wide) in paragraph at lines 420--421
+[][][][][][][][][][][][][][][][][][][][][][][][]
+ []
+
+
+Overfull \hbox (243.00598pt too wide) in paragraph at lines 425--426
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (75.00427pt too wide) in paragraph at lines 444--445
+[][][][][][][][][][][][][][][][][][][][][][][][]
+ []
+
+
+Overfull \hbox (177.00531pt too wide) in paragraph at lines 445--446
+[][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+[13]
+Cap\'{\i }tulo 4.
+[14
+
+]
+Overfull \hbox (153.00507pt too wide) in paragraph at lines 491--492
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (159.00513pt too wide) in paragraph at lines 492--493
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (159.00513pt too wide) in paragraph at lines 493--494
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (165.00519pt too wide) in paragraph at lines 494--495
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (153.00507pt too wide) in paragraph at lines 495--496
+[][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (87.0044pt too wide) in paragraph at lines 496--497
+[][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (147.005pt too wide) in paragraph at lines 497--498
+[][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (81.00433pt too wide) in paragraph at lines 498--499
+[][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (141.00494pt too wide) in paragraph at lines 499--500
+[][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (69.00421pt too wide) in paragraph at lines 500--501
+[][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (147.005pt too wide) in paragraph at lines 501--502
+[][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (81.00433pt too wide) in paragraph at lines 502--503
+[][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (105.00458pt too wide) in paragraph at lines 505--507
+[][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (99.00452pt too wide) in paragraph at lines 512--514
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+[15]
+Overfull \hbox (129.00482pt too wide) in paragraph at lines 560--561
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (171.00525pt too wide) in paragraph at lines 564--566
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (171.00525pt too wide) in paragraph at lines 571--573
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+[16]
+Overfull \hbox (165.00519pt too wide) in paragraph at lines 629--630
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (171.00525pt too wide) in paragraph at lines 635--637
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+[17]
+Overfull \hbox (147.005pt too wide) in paragraph at lines 639--641
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (147.005pt too wide) in paragraph at lines 643--645
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+<Paridad.png, id=70, 405.76593pt x 402.00188pt>
+File: Paridad.png Graphic file (type png)
+ <use Paridad.png>
+Package pdftex.def Info: Paridad.png used on input line 650.
+(pdftex.def)             Requested size: 345.0pt x 341.80748pt.
+ <graficoparidad.png, id=71, 273.27094pt x 288.3272pt>
+File: graficoparidad.png Graphic file (type png)
+
+<use graficoparidad.png>
+Package pdftex.def Info: graficoparidad.png used on input line 658.
+(pdftex.def)             Requested size: 276.00105pt x 291.22575pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[18 <./Paridad.png>] [19 <./graficoparidad.png>]
+Cap\'{\i }tulo 5.
+
+Overfull \hbox (93.00446pt too wide) in paragraph at lines 693--694
+[][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (177.00531pt too wide) in paragraph at lines 694--695
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (195.0055pt too wide) in paragraph at lines 695--696
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+[20
+
+]
+Overfull \hbox (123.00476pt too wide) in paragraph at lines 696--697
+[][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (111.00464pt too wide) in paragraph at lines 697--698
+[][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (147.005pt too wide) in paragraph at lines 698--699
+[][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (99.00452pt too wide) in paragraph at lines 699--700
+[][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (21.00372pt too wide) in paragraph at lines 713--714
+[][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (45.00397pt too wide) in paragraph at lines 714--715
+[][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (15.00366pt too wide) in paragraph at lines 715--716
+[][][][][][][][][][][][][][][][] 
+ []
+
+[21] <Protocolo.png, id=86, 458.46281pt x 414.79968pt>
+File: Protocolo.png Graphic file (type png)
+ <use Protocolo.png>
+Package pdftex.def Info: Protocolo.png used on input line 770.
+(pdftex.def)             Requested size: 310.4979pt x 280.93976pt.
+ [22 <./Protocolo.png>]
+<graficoprotocolo.png, id=90, 313.9228pt x 167.87718pt>
+File: graficoprotocolo.png Graphic file (type png)
+ <use graficoprotocolo.png>
+Package pdftex.def Info: graficoprotocolo.png used on input line 784.
+(pdftex.def)             Requested size: 345.0pt x 184.50409pt.
+ [23 <./graficoprotocolo.png>]
+("Reporte 1.aux"
+LaTeX Info: Redefining \. on input line 7.
+LaTeX Info: Redefining \% on input line 7.
+)
+
+LaTeX Warning: There were multiply-defined labels.
+
+ ) 
+Here is how much of TeX's memory you used:
+ 6902 strings out of 493334
+ 99465 string characters out of 3139235
+ 196101 words of memory out of 3000000
+ 10300 multiletter control sequences out of 15000+200000
+ 52706 words of font info for 54 fonts, out of 3000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 40i,6n,38p,398b,1546s stack positions out of 5000i,500n,10000p,200000b,50000s
+{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-mathsy.enc}{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-mathi
+t.enc}{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-rm.enc}{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-mathe
+x.enc}{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-ec.enc}<C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmbx1
+2.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmex10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/l
+mmi10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/l
+m/lmr12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmr17.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public
+/lm/lmsy10.pfb>
+Output written on "Reporte 1.pdf" (23 pages, 258155 bytes).
+PDF statistics:
+ 123 PDF objects out of 1000 (max. 8388607)
+ 0 named destinations out of 1000 (max. 500000)
+ 46 words of extra memory for PDF output out of 10000 (max. 10000000)
+
