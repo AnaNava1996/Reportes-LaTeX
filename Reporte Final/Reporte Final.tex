@@ -1,0 +1,2132 @@
+\documentclass[a4paper,twoside,10pt]{report}
+\usepackage[spanish,activeacute]{babel}
+\usepackage[T1]{fontenc}
+\usepackage[ansinew]{inputenc}
+\usepackage{mathtools}
+\usepackage{listings}
+\usepackage{lmodern} %Type1-font for non-english texts and characters
+\usepackage[scaled]{beramono}
+\usepackage{caption}
+%% Packages for Graphics & Figures %%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{graphicx}
+\usepackage{subfig} %%For loading graphic files
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amsfonts}
+\title{Reporte Final\LaTeX{}}
+\author{Ana Paola Nava vivas}
+\date{4 de Diciembre del 2016}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% DOCUMENT
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+
+\pagestyle{empty} %No headings for the first pages.
+
+%% Title Page %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% ==> Write your text here or include other files.
+
+%% The simple version:
+\title{Reporte Final}
+\author{Ana Paola Nava Vivas}
+%\date{} %%If commented, the current date is used.
+\maketitle
+
+
+\cleardoublepage %The first chapter should start on an odd page.
+
+\pagestyle{plain} %Now display headings: headings / fancy / ...
+
+
+
+%% Chapters %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% ==> Write your text here or include other files.
+
+%\input{intro} %You need a file 'intro.tex' for this.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% ==> Some hints are following:
+
+\chapter{WEB - EBAY}\label{hints}
+
+\section{Descripción del programa 1}\label{umlauts}
+
+El programa debe encontrar las palabras que contengan las palabras WEB y EBAY, indicar cuales son y su posición en el texto. Debe haber un modo automático y uno manual. En el modo automático se debe leer un archivo de texto previamente guardado, y en el modo manual se introducirá la cadena desde la consola.
+
+
+\section{Código del programa 1}\label{dividing}
+
+A continuación se muestra el código del programa en python.
+
+
+\lstset{language=Python, breaklines=true, basicstyle=\tiny,tabsize=1,frame=single}
+\begin{lstlisting}[language=Python]
+
+import turtle
+import re
+
+archivo=open('ebayWiki.txt','a+')
+
+def Graficar():
+    turtle.setup(800, 600)      # set the window size to 800 by 600 pixels
+    wn = turtle.Screen()        # set wn to the window object
+    wn.bgcolor("lightpink")    # set the window background color
+    wn.title("Automata web ebay")    # set the window title
+
+    l=turtle.Turtle()
+    l.hideturtle()
+    l.penup()
+    l.goto(50,270)
+    l.write("START",font=('Cambria',20,'bold'))
+    f0=turtle.Turtle()######################
+    f0.color("lightpink")
+    f0.pensize(5)
+    f0.penup()
+    f0.left(90)
+    f0.forward(275)
+    f0.right(90)
+    f0.forward(85)
+    f0.right(150)
+    f0.pendown()
+    f0.color("darkslateblue")
+    f0.forward(55)
+    tess = turtle.Turtle()#####################
+    tess.color("lightpink")         
+    tess.pensize(4)             
+    tess.left(90)
+    tess.speed(20)
+    tess.hideturtle()
+    tess.penup()
+    tess.forward(190)
+    tess.color("white") 
+    tess.right(90)
+    tess.pendown()
+    for i in range (36):
+        tess.left(10)
+        tess.forward(7)
+    l0=turtle.Turtle()
+    l0.hideturtle()
+    l0.penup()
+    l0.goto(-14,217)
+    l0.write("q0",font=('Cambria',20,'bold'))
+    f1=turtle.Turtle()######################
+    f1.color("lightpink")
+    f1.pensize(4)
+    f1.penup()
+    f1.left(90)
+    f1.forward(225)
+    f1.left(90)
+    f1.forward(43)
+    f1.left(38)
+    f1.pendown()
+    f1.color("darkslateblue")
+    f1.forward(95)
+    l1=turtle.Turtle()#######################
+    l1.hideturtle()
+    l1.penup()
+    l1.goto(-80,200)
+    l1.write("w",font=('Cambria',12,'bold'))
+    tess1 = turtle.Turtle()####################
+    tess1.color("lightpink")
+    tess1.pensize(4)
+    tess1.speed(40)
+    tess1.left(150)#right210
+    tess1.hideturtle()
+    tess1.penup()
+    tess1.forward(190)
+    tess1.pendown()
+    tess1.speed(20)
+    tess1.color("white")
+    for i in range (36):
+        tess1.right(10)
+        tess1.forward(7)
+    l1.goto(-150,120)####################
+    l1.write("q1",font=('Cambria',20,'bold'))
+    f2=turtle.Turtle()######################
+    f2.color("lightpink")
+    f2.pensize(4)
+    f2.penup()
+    f2.left(149)
+    f2.forward(175)
+    f2.left(121)
+    f2.pendown()
+    f2.color("darkslateblue")
+    f2.forward(38)
+    l1.goto(-165,65)####################
+    l1.write("e",font=('Cambria',12,'bold'))
+    tess2 = turtle.Turtle()####################
+    tess2.hideturtle()
+    tess2.color("lightpink")
+    tess2.pensize(4)
+    tess2.speed(40)
+    tess2.right(168)
+    tess2.penup()
+    tess2.forward(142)
+    tess2.pendown()
+    tess2.speed(20)
+    tess2.color("white")
+    for i in range (36):
+        tess2.right(10)
+        tess2.forward(7)
+    l1.goto(-150,0)####################
+    l1.write("q2",font=('Cambria',20,'bold'))
+    f3=turtle.Turtle()######################
+    f3.color("lightpink")
+    f3.pensize(4)
+    f3.penup()
+    f3.right(168)
+    f3.forward(155)
+    f3.left(78)
+    f3.pendown()
+    f3.color("darkslateblue")
+    f3.forward(25)
+    l1.goto(-165,-55)####################
+    l1.write("b",font=('Cambria',12,'bold'))
+    tess3 = turtle.Turtle()####################
+    tess3.color("lightpink")
+    tess3.speed(40)
+    tess3.pensize(4)
+    tess3.right(132)
+    tess3.hideturtle()
+    tess3.penup()
+    tess3.forward(172)
+    tess3.pendown()
+    tess3.speed(20)
+    tess3.color("white")
+    for i in range (36):
+        tess3.right(10)
+        tess3.forward(7)
+    tess3.color("lightpink")
+    tess3.pensize(3)
+    tess3.hideturtle()
+    tess3.penup()
+    tess3.right(90)
+    tess3.forward(12)
+    tess3.left(90)
+    tess3.pendown()
+    tess3.color("white")
+    for i in range (36):
+        tess3.right(10)
+        tess3.forward(5)
+    l1.goto(-155,-110)####################
+    l1.write("q3",font=('Cambria',20,'bold'))
+    f4=turtle.Turtle()######################
+    f4.color("lightpink")
+    f4.pensize(4)
+    f4.penup()
+    f4.left(90)
+    f4.forward(225)
+    f4.right(90)
+    f4.forward(43)
+    f4.right(38)
+    f4.pendown()
+    f4.color("darkslateblue")
+    f4.forward(95)
+    l1.goto(80,200)
+    l1.write("e",font=('Cambria',12,'bold'))
+    tess4 = turtle.Turtle()####################
+    tess4.color("lightpink")
+    tess4.pensize(4)
+    tess4.left(30)
+    tess4.speed(20)
+    tess4.hideturtle()
+    tess4.penup()
+    tess4.forward(190)
+    tess4.pendown()
+    tess4.color("white")
+    for i in range (36):
+        tess4.left(10)
+        tess4.forward(7)
+    l1.goto(130,120)####################
+    l1.write("q4",font=('Cambria',20,'bold'))
+    f5=turtle.Turtle()######################
+    f5.color("lightpink")
+    f5.pensize(4)
+    f5.penup()
+    f5.left(31)
+    f5.forward(175)
+    f5.right(121)
+    f5.pendown()
+    f5.color("darkslateblue")
+    f5.forward(38)
+    l1.goto(155,57)
+    l1.write("b",font=('Cambria',12,'bold'))
+    tess5 = turtle.Turtle()####################
+    tess5.color("lightpink")
+    tess5.pensize(4)
+    tess5.right(12)
+    tess5.speed(20)
+    tess5.hideturtle()
+    tess5.penup()
+    tess5.forward(142)
+    tess5.pendown()
+    tess5.color("white")
+    for i in range (36):
+        tess5.left(10)
+        tess5.forward(7)
+    l1.goto(130,0)####################
+    l1.write("q5",font=('Cambria',20,'bold'))
+    f6=turtle.Turtle()######################
+    f6.color("lightpink")
+    f6.pensize(4)
+    f6.penup()
+    f6.right(12)
+    f6.forward(155)
+    f6.right(78)
+    f6.pendown()
+    f6.color("darkslateblue")
+    f6.forward(25)
+    l1.goto(155,-50)
+    l1.write("a",font=('Cambria',12,'bold'))
+    tess6 = turtle.Turtle()####################
+    tess6.color("lightpink")
+    tess6.pensize(4)
+    tess6.right(48)
+    tess6.speed(20)
+    tess6.hideturtle()
+    tess6.penup()
+    tess6.forward(172)
+    tess6.pendown()
+    tess6.color("white")
+    for i in range (36):
+        tess6.left(10)
+        tess6.forward(7)
+    l1.goto(130,-110)####################
+    l1.write("q6",font=('Cambria',20,'bold'))
+    f7=turtle.Turtle()######################
+    f7.color("lightpink")
+    f7.pensize(4)
+    f7.penup()
+    f7.right(42.5)
+    f7.forward(208)
+    f7.right(47.5)
+    f7.pendown()
+    f7.color("darkslateblue")
+    f7.forward(30)
+    l1.goto(155,-160)
+    l1.write("y",font=('Cambria',12,'bold'))
+    tess7 = turtle.Turtle()####################
+    tess7.color("lightpink")
+    tess7.pensize(4)
+    tess7.right(65)
+    tess7.speed(20)
+    tess7.hideturtle()
+    tess7.penup()
+    tess7.forward(260)
+    tess7.pendown()
+    tess7.color("white")
+    for i in range (36):
+        tess7.left(10)
+        tess7.forward(7)
+    tess7.color("lightpink")
+    tess7.pensize(3)
+    tess7.hideturtle()
+    tess7.penup()
+    tess7.left(90)
+    tess7.forward(12)
+    tess7.right(90)
+    tess7.pendown()
+    tess7.color("white")
+    for i in range (36):
+        tess7.left(10)
+        tess7.forward(5)
+    l1.goto(130,-233)####################
+    l1.write("q7",font=('Cambria',20,'bold'))
+
+    f8=turtle.Turtle()######################
+    f8.color("lightpink")
+    f8.pensize(4)
+    f8.penup()
+    f8.right(180)
+    f8.forward(110)
+    f8.right(90)
+    f8.forward(150)
+    f8.right(53)
+    f8.pendown()
+    f8.color("darkorchid")
+    f8.forward(90)
+    l1.goto(-70,160)
+    l1.write("no w,e",font=('Cambria',12,'bold'))
+    f10=turtle.Turtle()######################
+    f10.color("lightpink")
+    f10.pensize(4)
+    f10.penup()
+    f10.left(159)
+    f10.forward(139)
+    f10.right(69)
+    f10.pendown()
+    f10.color("darkorchid")
+    f10.forward(35)
+    l1.goto(-127,57)
+    l1.write("w",font=('Cambria',12,'bold'))
+    f11=turtle.Turtle()######################
+    f11.color("lightpink")
+    f11.pensize(4)
+    f11.penup()
+    f11.forward(108)
+    f11.left(90)
+    f11.forward(155)
+    f11.left(53)
+    f11.pendown()
+    f11.color("darkorchid")
+    f11.forward(93)
+    l1.goto(20,165)
+    l1.write("no w,e,b",font=('Cambria',12,'bold'))
+    f12=turtle.Turtle()######################
+    f12.color("lightpink")
+    f12.pensize(4)
+    f12.penup()
+    f12.right(24)
+    f12.forward(139)
+    f12.left(170)
+    f12.pendown()
+    f12.color("gray")
+    f12.forward(280)
+    l1.goto(120,55)
+    l1.write("e",font=('Cambria',12,'bold'))
+    f13=turtle.Turtle()######################
+    f13.color("lightpink")
+    f13.pensize(4)
+    f13.penup()
+    f13.left(20)
+    f13.forward(140)
+    f13.left(70)
+    f13.pendown()
+    f13.color("springgreen")
+    f13.forward(35)
+    f14=turtle.Turtle()######################
+    f14.color("lightpink")
+    f14.pensize(4)
+    f14.penup()
+    f14.right(22)
+    f14.forward(170)
+    f14.left(80)
+    f14.pendown()
+    f14.color("springgreen")
+    f14.forward(100)
+    f14.left(60)
+    f14.forward(90)
+    l1.goto(215,0)####################
+    l1.write("e",font=('Cambria',12,'bold'))
+    l1.goto(237,0)####################
+    l1.write("e",font=('Cambria',12,'bold'))
+    f15=turtle.Turtle()######################
+    f15.color("lightpink")
+    f15.pensize(4)
+    f15.penup()
+    f15.right(47)
+    f15.forward(245)
+    f15.left(110)
+    f15.pendown()
+    f15.color("springgreen")
+    f15.forward(200)
+    f15.left(60)
+    f15.forward(140)
+    f16=turtle.Turtle()######################
+    f16.color("lightpink")
+    f16.pensize(4)
+    f16.penup()
+    f16.right(50)
+    f16.forward(290)
+    f16.left(105)
+    f16.pendown()
+    f16.color("orangered")
+    f16.forward(330)
+    f16.left(70)
+    f16.forward(180)
+    f16.left(44)
+    f16.forward(240)
+    f17=turtle.Turtle()######################
+    f17.color("lightpink")
+    f17.pensize(4)
+    f17.penup()
+    f17.right(30)
+    f17.forward(210)
+    f17.left(80)
+    f17.pendown()
+    f17.color("orangered")
+    f17.forward(200)
+    f17.left(80)
+    f17.forward(180)
+    f17.left(34)
+    f17.forward(160)
+    l1.goto(255,25)####################
+    l1.write("no w,e,y",font=('Cambria',12,'bold'))
+    l1.goto(317,55)####################
+    l1.write("no w,e",font=('Cambria',12,'bold'))
+    f18=turtle.Turtle()######################
+    f18.color("lightpink")
+    f18.pensize(4)
+    f18.penup()
+    f18.left(20)
+    f18.forward(115)
+    f18.left(122)
+    f18.pendown()
+    f18.color("orangered")
+    f18.forward(110)
+    f18.right(30)
+    f18.forward(91)
+    f19=turtle.Turtle()######################
+    f19.color("lightpink")
+    f19.pensize(4)
+    f19.penup()
+    f19.left(20)
+    f19.forward(115)
+    f19.left(137)
+    f19.pendown()
+    f19.color("gray")
+    f19.forward(230)
+    f20=turtle.Turtle()######################
+    f20.color("lightpink")
+    f20.pensize(4)
+    f20.penup()
+    f20.left(50)
+    f20.forward(160)
+    f20.left(127)
+    f20.pendown()
+    f20.color("gray")
+    f20.forward(205)
+    f21=turtle.Turtle()######################
+    f21.color("lightpink")
+    f21.pensize(4)
+    f21.penup()
+    f21.right(60)
+    f21.forward(215)
+    f21.right(172.5)
+    f21.pendown()
+    f21.color("gray")
+    f21.forward(360)
+    l1.goto(-100,105)####################
+    l1.write("w",font=('Cambria',12,'bold'))
+    f22=turtle.Turtle()######################
+    f22.color("lightpink")
+    f22.pensize(4)
+    f22.penup()
+    f22.right(140)
+    f22.forward(135)
+    f22.right(160)
+    f22.pendown()
+    f22.color("gray")
+    f22.forward(100)
+    f22.left(60)
+    f22.forward(115)
+    f23=turtle.Turtle()######################
+    f23.color("lightpink")
+    f23.pensize(4)
+    f23.penup()
+    f23.right(140)
+    f23.forward(135)
+    f23.right(180)
+    f23.pendown()
+    f23.color("springgreen")
+    f23.forward(280)
+    f24=turtle.Turtle()######################
+    f24.color("lightpink")
+    f24.pensize(4)
+    f24.penup()
+    f24.right(180)
+    f24.forward(100)
+    f24.right(155)
+    f24.pendown()
+    f24.color("springgreen")
+    f24.forward(235)
+    l1.goto(0,105)####################
+    l1.write("no w,e,a",font=('Cambria',12,'bold'))
+    l1.goto(90,88)####################
+    l1.write("e",font=('Cambria',12,'bold'))
+    f25=turtle.Turtle()######################
+    f25.color("lightpink")
+    f25.pensize(4)
+    f25.penup()
+    f25.right(140)
+    f25.forward(135)
+    f25.left(140)
+    f25.pendown()
+    f25.color("red")
+    f25.forward(210)
+    l1.goto(0,-100)####################
+    l1.write("a",font=('Cambria',12,'bold'))
+    f26=turtle.Turtle()######################
+    f26.color("lightpink")
+    f26.pensize(4)
+    f26.penup()
+    f26.right(150)
+    f26.forward(210)
+    f26.right(90)
+    f26.pendown()
+    f26.color("orangered")
+    f26.forward(210)
+    f26.right(60)
+    f26.forward(210)
+    f26.right(60)
+    f26.forward(150)
+    f27=turtle.Turtle()######################
+    f27.color("lightpink")
+    f27.pensize(4)
+    f27.penup()
+    f27.right(180)
+    f27.forward(181)
+    f27.right(60)
+    f27.pendown()
+    f27.color("orangered")
+    f27.forward(100)
+    f27.right(60)
+    f27.forward(170)
+    f27.right(60)
+    f27.forward(105)
+    l1.goto(-295,60)####################
+    l1.write("no w,e,a",font=('Cambria',12,'bold'))
+    l1.goto(-240,40)####################
+    l1.write("no w,e,b",font=('Cambria',12,'bold'))
+    f28=turtle.Turtle()######################
+    f28.color("lightpink")
+    f28.pensize(3)
+    f28.penup()
+    f28.left(90)
+    f28.forward(255)
+    f28.right(90)
+    f28.forward(30)
+    f28.pendown()
+    f28.color("royalblue")
+    f28.left(45)
+    for i in range(19):
+        f28.left(11)
+        f28.forward(4)
+    f29=turtle.Turtle()######################
+    f29.color("lightpink")
+    f29.pensize(3)
+    f29.penup()
+    f29.left(130)
+    f29.forward(225)
+    f29.right(40)
+    f29.pendown()
+    f29.color("royalblue")
+    for i in range(21):
+        f29.left(11)
+        f29.forward(4)
+
+    f30=turtle.Turtle()######################
+    f30.color("lightpink")
+    f30.pensize(3.5)
+    f30.penup()
+    f30.left(40)
+    f30.forward(233)
+    f30.pendown()
+    f30.color("royalblue")
+    for i in range(19):
+        f30.left(11)
+        f30.forward(4)
+    l1.goto(-50,272)####################
+    l1.write("no w,e",font=('Cambria',12,'bold'))
+    l1.goto(-200,170)####################
+    l1.write("w",font=('Cambria',12,'bold'))
+    l1.goto(190,170)####################
+    l1.write("e",font=('Cambria',12,'bold'))
+
+    wn.exitonclick()
+
+##########################################################
+opcion=6#un valor cualquiera para que se inicialice
+while(opcion!=0):
+    opcion=int(input("1 para manual, 2 para automatico, 3 para ver el grafico, 0 para salir: "))
+    if(opcion==1):
+        estado=0
+        columna=0
+        cad=""
+        algo=False
+        algo2=False
+        cadenita=input("Introduzca la palabra: ")
+        f=open('WEBAY.txt','a+')
+        f.write("\n\nMODO MANUAL: "+cadenita)
+        for i in cadenita:#el estado se inicializa en 0
+            columna=columna+1
+            #if(re.search(i,"aáäàbcdeéèëfghiíìïjklmnñoóòöpqrstuúùüvwxyzAÁÀÄBCDÉÈËEFGHÍÌÏIJKLMNÑÓÒÖOPKRSTÚÙÜUWXYZ")):
+            #intente tambien chr() y un range... crh() es para devolver el char de cierto numero ej: chr(97) es a
+            if(i=='a'or i=='á'or i=='ä'or i=='à'or i=='b'or i=='c'or i=='d'or  i=='e' or i=='é'or i=='è'or i=='ë'or i=='f'or i=='g' or i=='h'or i=='i'or i=='í'or i=='ì'or i=='ï'or i=='j'or i=='k'or i=='l'or i=='m'or i=='n'or i=='ñ'or i=='o'or i=='ó'or i=='ò'or i=='ö'or i=='p'or i=='q'or i=='r'or i=='s' or  i=='t'or i=='u'or i=='ú'or i=='ù'or i=='ü'or i=='v'or i=='w'or i=='x'or i=='y'or i=='z'or i=='A'or i=='Á'or i=='À'or i=='Ä'or i=='B'or i=='C'or i=='D'or i=='É'or i=='È'or i=='Ë'or i=='E'or i=='F'or i=='G'or i=='H'or i=='Í'or i=='Ì'or i=='Ï'or i=='I'or i=='J'or i=='K'or i=='L'or i=='M'or i=='N'or i=='Ñ'or i=='Ó'or i=='Ò'or i=='Ö'or i=='O'or i=='P'or i=='K'or i=='R'or i=='S'or i=='T'or i=='Ú'or i=='Ù'or i=='Ü'or i=='U'or i=='W'or i=='X'or i=='Y'or i=='Z'):
+                cad=cad+i
+                if(estado==0):
+                    if(i=='w' or i=='W'):
+                        estado=1
+                    elif(i=='e' or i=='é' or i=='è' or i=='ë' or i=='É' or i=='E' or i=='È' or i=='Ë'):
+                        estado=4
+                    else:
+                        estado=0
+                    print("q"+str(estado)+" - "+i)
+                    f.write("\nq"+str(estado)+" - "+i)
+                elif(estado==1):
+                    if(i=='e' or i=='é' or i=='è' or i=='ë' or i=='É' or i=='E' or i=='È' or i=='Ë'):
+                        estado=2
+                    elif(i=='w' or i=='W'):
+                        estado=1
+                    else:
+                        estado=0
+                    print("q"+str(estado)+" - "+i)
+                    f.write("\nq"+str(estado)+" - "+i)
+                elif(estado==2):
+                    if(i=='e' or i=='é' or i=='è' or i=='ë' or i=='É' or i=='E' or i=='È' or i=='Ë'):
+                        estado=4
+                        print("q"+str(estado)+" - "+i)
+                        f.write("\nq"+str(estado)+" - "+i)
+                    elif(i=='b' or i=='B'):
+                        estado=3#################
+                        algo=True
+                        print("q"+str(estado)+" - "+i+"  en la columna "+str(columna))
+                        f.write("\nq"+str(estado)+" - "+i+"  en la columna "+str(columna))
+                    elif(i=='w' or i=='W'):
+                        estado=1
+                        print("q"+str(estado)+" - "+i)
+                        f.write("\nq"+str(estado)+" - "+i)
+                    else:
+                        estado=0
+                        print("q"+str(estado)+" - "+i)
+                        f.write("\nq"+str(estado)+" - "+i)
+                elif(estado==3):
+                    if(i=='w' or i=='W'):
+                        estado=1
+                    elif(i=='e' or i=='é' or i=='è' or i=='ë' or i=='É' or i=='E' or i=='È' or i=='Ë'):
+                        estado=4
+                    elif(i=='a' or i=='á' or i=='à' or i=='ä' or i=='Á' or i=='A' or i=='À' or i=='Ä'):
+                        estado=6           
+                    else:
+                        estado=0
+                    print("q"+str(estado)+" - "+i)
+                    f.write("\nq"+str(estado)+" - "+i)
+                elif(estado==4):
+                    if(i=='e' or i=='é' or i=='è' or i=='ë' or i=='É' or i=='E' or i=='È' or i=='Ë'):
+                        estado=4
+                    elif(i=='w' or i=='W'):
+                        estado=1
+                    elif(i=='b' or i=='B'):
+                        estado=5
+                    else:
+                        estado=0
+                    print("q"+str(estado)+" - "+i)
+                    f.write("\nq"+str(estado)+" - "+i)
+                elif(estado==5):
+                    if(i=='e' or i=='é' or i=='è' or i=='ë' or i=='É' or i=='E' or i=='È' or i=='Ë'):
+                        estado=4
+                    elif(i=='w' or i=='W'):
+                        estado=1
+                    elif(i=='a' or i=='á' or i=='à' or i=='ä' or i=='Á' or i=='A' or i=='À' or i=='Ä'):
+                        estado=6
+                    else:
+                        estado=0
+                    print("q"+str(estado)+" - "+i)
+                    f.write("\nq"+str(estado)+" - "+i)
+                elif(estado==6):
+                    if(i=='e' or i=='é' or i=='è' or i=='ë' or i=='É' or i=='E' or i=='È' or i=='Ë'):
+                        estado=4
+                        print("q"+str(estado)+" - "+i)
+                        f.write("\nq"+str(estado)+" - "+i)
+                    elif(i=='w' or i=='W'):
+                        estado=1
+                        print("q"+str(estado)+" - "+i)
+                        f.write("\nq"+str(estado)+" - "+i)
+                    elif(i=='y' or i=='Y'):
+                        estado=7####################
+                        algo2=True
+                        print("q"+str(estado)+" - "+i+"  columna "+str(columna))
+                        f.write("\nq"+str(estado)+" - "+i+"  en la columna "+str(columna))
+                    else:
+                        estado=0
+                        print("q"+str(estado)+" - "+i)
+                        f.write("\nq"+str(estado)+" - "+i)
+                elif(estado==7):
+                    if(i=='e' or i=='é' or i=='è' or i=='ë' or i=='É' or i=='E' or i=='È' or i=='Ë'):
+                        estado=4
+                    elif(i=='w' or i=='W'):
+                        estado=1
+                    else:
+                        estado=0
+                    print("q"+str(estado)+" - "+i)
+                    f.write("\nq"+str(estado)+" - "+i)
+            else:
+                estado=0
+                print("q"+str(estado)+" - "+i)
+                f.write("\nq"+str(estado)+" - "+i)
+                if(algo==True and algo2==True):
+                    print("palabra "+cad)
+                    f.write("\npalabra "+cad)
+                elif(algo==True):
+                    print("palabra: "+cad)
+                    f.write("\npalabra "+cad)
+                elif(algo2==True):
+                    print("palabra: "+cad)
+                    f.write("\npalabra "+cad)
+                algo=False
+                algo2=False
+                cad=""#para el automatico poner if i==\n columna 0...
+        f.close()
+    elif(opcion==2):#########################################################
+        c=open("WEBAY.txt","a+")
+        c.write("\n\nMODO AUTOMATICO:")
+        archivo=open("oki.txt","r+")
+        linea=0
+        for line in archivo:
+            cad=""
+            algo=False
+            algo2=False
+            estado=0
+            columna=0
+            linea=linea+1
+            for i in line:
+                    columna=columna+1
+                    #if(re.search(i,"aáäàbcdeéèëfghiíìïjklmnñoóòöpqrstuúùüvwxyzAÁÀÄBCDÉÈËEFGHÍÌÏIJKLMNÑÓÒÖOPKRSTÚÙÜUWXYZ")):
+                    #intente tambien chr() y un range... crh() es para devolver el char de cierto numero ej: chr(97) es a
+                    if(i=='a'or i=='á'or i=='ä'or i=='à'or i=='b'or i=='c'or i=='d'or  i=='e' or i=='é'or i=='è'or i=='ë'or i=='f'or i=='g' or i=='h'or i=='i'or i=='í'or i=='ì'or i=='ï'or i=='j'or i=='k'or i=='l'or i=='m'or i=='n'or i=='ñ'or i=='o'or i=='ó'or i=='ò'or i=='ö'or i=='p'or i=='q'or i=='r'or i=='s' or  i=='t'or i=='u'or i=='ú'or i=='ù'or i=='ü'or i=='v'or i=='w'or i=='x'or i=='y'or i=='z'or i=='A'or i=='Á'or i=='À'or i=='Ä'or i=='B'or i=='C'or i=='D'or i=='É'or i=='È'or i=='Ë'or i=='E'or i=='F'or i=='G'or i=='H'or i=='Í'or i=='Ì'or i=='Ï'or i=='I'or i=='J'or i=='K'or i=='L'or i=='M'or i=='N'or i=='Ñ'or i=='Ó'or i=='Ò'or i=='Ö'or i=='O'or i=='P'or i=='K'or i=='R'or i=='S'or i=='T'or i=='Ú'or i=='Ù'or i=='Ü'or i=='U'or i=='W'or i=='X'or i=='Y'or i=='Z'):
+                        cad=cad+i
+                        if(estado==0):
+                            if(i=='w' or i=='W'):
+                                estado=1
+                            elif(i=='e' or i=='é' or i=='è' or i=='ë' or i=='É' or i=='E' or i=='È' or i=='Ë'):
+                                estado=4
+                            else:
+                                estado=0
+                            print("q"+str(estado)+" - "+i)
+                            c.write("\nq"+str(estado)+" - "+i)
+                        elif(estado==1):
+                            if(i=='e' or i=='é' or i=='è' or i=='ë' or i=='É' or i=='E' or i=='È' or i=='Ë'):
+                                estado=2
+                            elif(i=='w' or i=='W'):
+                                estado=1
+                            else:
+                                estado=0
+                            print("q"+str(estado)+" - "+i)
+                            c.write("\nq"+str(estado)+" - "+i)
+                        elif(estado==2):
+                            if(i=='e' or i=='é' or i=='è' or i=='ë' or i=='É' or i=='E' or i=='È' or i=='Ë'):
+                                estado=4
+                                print("q"+str(estado)+" - "+i)
+                                c.write("\nq"+str(estado)+" - "+i)
+                            elif(i=='b' or i=='B'):
+                                estado=3#################
+                                algo=True
+                                print("q"+str(estado)+" - "+str(i)+",  en la linea "+str(linea)+",  en la columna "+str(columna))
+                                c.write("\nq"+str(estado)+" - "+str(i)+", en la linea "+str(linea)+",  en la columna "+str(columna))
+                            elif(i=='w' or i=='W'):
+                                estado=1
+                                print("q"+str(estado)+" - "+i)
+                                c.write("\nq"+str(estado)+" - "+i)
+                            else:
+                                estado=0
+                                print("q"+str(estado)+" - "+i)
+                                c.write("\nq"+str(estado)+" - "+i)
+                        elif(estado==3):
+                            if(i=='w' or i=='W'):
+                                estado=1
+                            elif(i=='e' or i=='é' or i=='è' or i=='ë' or i=='É' or i=='E' or i=='È' or i=='Ë'):
+                                estado=4
+                            elif(i=='a' or i=='á' or i=='à' or i=='ä' or i=='Á' or i=='A' or i=='À' or i=='Ä'):
+                                estado=6           
+                            else:
+                                estado=0
+                            print("q"+str(estado)+" - "+i)
+                            c.write("\nq"+str(estado)+" - "+i)
+                        elif(estado==4):
+                            if(i=='e' or i=='é' or i=='è' or i=='ë' or i=='É' or i=='E' or i=='È' or i=='Ë'):
+                                estado=4
+                            elif(i=='w' or i=='W'):
+                                estado=1
+                            elif(i=='b' or i=='B'):
+                                estado=5
+                            else:
+                                estado=0
+                            print("q"+str(estado)+" - "+i)
+                            c.write("\nq"+str(estado)+" - "+i)
+                        elif(estado==5):
+                            if(i=='e' or i=='é' or i=='è' or i=='ë' or i=='É' or i=='E' or i=='È' or i=='Ë'):
+                                estado=4
+                            elif(i=='w' or i=='W'):
+                                estado=1
+                            elif(i=='a' or i=='á' or i=='à' or i=='ä' or i=='Á' or i=='A' or i=='À' or i=='Ä'):
+                                estado=6
+                            else:
+                                estado=0
+                            print("q"+str(estado)+" - "+i)
+                            c.write("\nq"+str(estado)+" - "+i)
+                        elif(estado==6):
+                            if(i=='e' or i=='é' or i=='è' or i=='ë' or i=='É' or i=='E' or i=='È' or i=='Ë'):
+                                estado=4
+                                print("q"+str(estado)+" - "+i)
+                                c.write("\nq"+str(estado)+" - "+i)
+                            elif(i=='w' or i=='W'):
+                                estado=1
+                                print("q"+str(estado)+" - "+i)
+                                c.write("\nq"+str(estado)+" - "+i)
+                            elif(i=='y' or i=='Y'):
+                                estado=7####################
+                                algo2=True
+                                print("q"+str(estado)+" - "+i+",  en la linea "+str(linea)+",  en la columna "+str(columna))
+                                c.write("\nq"+str(estado)+" - "+str(i)+", en la linea "+str(linea)+",  en la columna "+str(columna))
+                            else:
+                                estado=0
+                                print("q"+str(estado)+" - "+i)
+                                c.write("\nq"+str(estado)+" - "+i)
+                        elif(estado==7):
+                            if(i=='e' or i=='é' or i=='è' or i=='ë' or i=='É' or i=='E' or i=='È' or i=='Ë'):
+                                estado=4
+                            elif(i=='w' or i=='W'):
+                                estado=1
+                            else:
+                                estado=0
+                            print("q"+str(estado)+" - "+i)
+                            c.write("\nq"+str(estado)+" - "+i)
+                    else:
+                        estado=0
+                        print("q"+str(estado)+" - "+i)
+                        c.write("\nq"+str(estado)+" - "+i)
+                        if(algo==True and algo2==True):
+                            print("palabra "+cad)
+                            c.write("\npalabra "+cad)
+                        elif(algo==True):
+                            print("palabra: "+cad)
+                            c.write("\npalabra "+cad)
+                        elif(algo2==True):
+                            print("palabra: "+cad)
+                            c.write("\npalabra "+cad)
+                        algo=False
+                        algo2=False
+                        cad=""
+        c.close()
+    elif(opcion==3):
+        Graficar()
+    elif(opcion==0):
+        opcion=0
+    else:#lo tuve que poner asi porque cuando le daba cero el volvia a salir el menu a pesar que ya habia terminado el programa
+        print("incorrecto, vuelva a intentar")
+
+\end{lstlisting}
+%% <== End of hints
+
+
+
+\lstset{basicstyle=\large,tabsize=1,frame=none}
+\begin{lstlisting}
+.
+.
+.
+.
+.
+.
+.
+.
+.
+
+.
+.
+
+\end{lstlisting}
+\section{Grafico del programa 1}\label{dividing}
+\begin{lstlisting}
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+
+\end{lstlisting}
+\begin{center}
+\begin{figure}[h]
+\includegraphics[width=1\textwidth]{graficowebebay.png} 
+\centering
+\end{figure}
+\end{center}
+
+\begin{lstlisting}
+.
+.
+.
+.
+.
+.
+.
+
+\end{lstlisting}
+\section{Modo manual}\label{dividing}
+\begin{lstlisting}
+.
+.
+.
+.
+.
+.
+
+\end{lstlisting}
+\begin{center}
+\begin{figure}[h]
+\includegraphics[width=0.8\textwidth]{manualweb.png} 
+\centering
+\end{figure}
+\end{center}
+\begin{lstlisting}
+.
+.
+\end{lstlisting}
+
+\section{Modo automático, archivo a leer y resultado}\label{dividing}
+\begin{center}
+\begin{figure}[h]
+\includegraphics[width=1\textwidth]{ejemploweb.png} 
+\centering
+\end{figure}
+\end{center}
+\begin{center}
+\begin{figure}[h]
+\includegraphics[width=0.7\textwidth]{automaticoweb.png} 
+\centering
+\end{figure}
+\end{center}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+\chapter{Expresión Regular}\label{hints}
+
+\section{Descripción del segundo programa}\label{dividing}
+El programa debe generar palíndromos de ceros y unos mediante una expresión regular.
+
+\section{Código del segundo programa}\label{dividing}
+A continuación el código en python.
+
+\lstset{language=Python, breaklines=true, basicstyle=\tiny,tabsize=1,frame=single}
+\begin{lstlisting}[language=Python]
+
+from random import randint
+
+cad1=""
+cad2=""
+
+op=6
+while(op!=0):
+    f=open('palindromitos.txt','a+')
+    op=int(input("\n0-Para salir.\n1-MANUAL.\n2-AUTOMATICO.\n-->"))
+    if(op==1):
+        L=int(input("introduzca la longitud de la cadena: "))
+        f.write("\n\nMODO MANUAL: "+str(L))
+        l=int(L/2)
+        for i in range(0,l):
+            a=randint(0,1)
+            if(a==0):
+                cad1=cad1+'1'
+                cad2='1'+cad2           
+            else:
+                cad1=cad1+'0'
+                cad2='0'+cad2
+        if(L%2 !=0):
+            c=randint(1,2)
+            if(c==2):
+                cad1=cad1+"1"
+            else:
+                cad1=cad1+"0"
+        print(cad1+cad2)
+        f.write("\n"+cad1+cad2)
+        cad1=""
+        cad2=""
+    elif(op==2):
+        b=randint(0,500)#500 porque la cadena debe llegar maximo a 1000...
+        print("b="+str(b))
+        for i in range(0,b):
+            a=randint(0,1)
+            if(a==0):
+                cad1=cad1+'1'
+                cad2='1'+cad2           
+            else:
+                cad1=cad1+'0'
+                cad2='0'+cad2
+        if(b!=500):
+            c=randint(1,3)
+            if(c!=1):
+                print("\nlargo de la cadena: "+str((b*2)+1)+"\n")
+                f.write("\n\nMODO AUTOMATICO:\nlongitud: "+str((b*2)+1))
+                if(c==2):
+                    cad1=cad1+"1"
+                else:
+                    cad1=cad1+"0"
+            else:
+                print("\nlargo de la cadena: "+str(b*2)+"\n")
+                f.write("\n\nMODO AUTOMATICO:\nlongitud: "+str(b*2))
+                cad1=cad1#concateno el vacio en el medio
+        else:
+            print("\nlargo de la cadena: "+str(b*2)+"\n")
+            f.write("\n\nMODO AUTOMATICO:\nlongitud: "+str((b*2)+1))
+        print(cad1+cad2)
+        f.write("\n"+cad1+cad2)
+        cad1=""
+        cad2=""
+    elif(op==0):
+        op=0
+print("Saliendo...")
+
+
+\end{lstlisting}
+
+%\lstset{basicstyle=\large,tabsize=1,frame=none}
+\section{Resultados del programa}\label{dividing}
+
+\begin{center}
+\begin{figure}[h]
+\includegraphics[width=1\textwidth]{palindromos.png} 
+\centering
+\end{figure}
+\end{center}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\chapter{Unambiguous Grammar}\label{hints}
+\section{Descripción del programa 3}\label{dividing}
+El programa consiste en aplicar una derivación por la izquierda para balancear una cadena de paréntesis. Como en todos los programas, debe haber un modo manual y otro automático. Adicional al balanceo, el programa acepta otros caracteres que no son paréntesis, en su modo manual.
+\section{Código del tercer programa}\label{dividing}
+A continuación se mostrará el código del tercer programa en python.
+
+
+\lstset{language=Python, breaklines=true, basicstyle=\tiny,tabsize=1,frame=single}
+\begin{lstlisting}
+
+from random import randint
+
+def Balanceo(xi,ROB):
+    k=1
+    ROBaux=[]
+    ROBaux2=[]
+    C=True
+    while(C):
+        for j in range(len(ROB)):
+            if(ROB[j]=='B'):
+                if(xi=='('):
+                    ROB.append('(')
+                    ROB.append('R')
+                    ROB.append('B')
+                    del (ROB[j])
+                    C=False
+                    break
+                elif(xi!=')'):
+                    ROBaux=ROB[0:j]
+                    ROBaux2=ROB[j:len(ROB)]
+                    ROB=ROBaux+[xi]+ROBaux2
+                    C=False
+                    break
+                else:
+                    #print("Truena")
+                    C=False
+                    break
+            elif(ROB[j]=='R'):
+                if(xi=='('):
+                    ROBaux=ROB[0:j]
+                    ROBaux2=ROB[j+1:len(ROB)]
+                    ROB=ROBaux+['(','R','R']+ROBaux2
+                    C=False
+                    break
+                elif(xi==')'):
+                    ROBaux=ROB[0:j]
+                    ROBaux2=ROB[j+1:len(ROB)]
+                    ROB=ROBaux+[')']+ROBaux2
+                    C=False
+                    break
+                else:
+                    ROBaux=ROB[0:j]
+                    ROBaux2=ROB[j:len(ROB)]
+                    ROB=ROBaux+[xi]+ROBaux2
+                    C=False
+                    break   
+            else:
+                pass
+    return ROB
+
+def Doesitwork(ROB,x):
+    f=open('grammar.txt','a+')
+    f.write("\n")
+    b=len(ROB)
+    aux=""
+    if(ROB[b-1]=='B'):#and(ROB[b-2]==')')
+        del(ROB[b-1])
+        print("\nLos parentesis")
+        f.write("\nLos parentesis\n")
+        print(ROB)
+        for item in ROB:
+            aux=aux+item
+        f.write(aux)
+        print("estan balanceados")
+        f.write("\nestan balanceados")
+    else:
+        print(x)
+        f.write("\n")
+        for item in x:
+            aux=aux+item
+        fm.write(aux)
+        print("  no estan balanceados")
+        f.write("\n  no estan balanceados")
+    f.close()
+
+
+
+op=input("\n\nm- Manual\na-Automatico\ns-Salir:    ")
+while(op!='s'):
+    if(op=='m'):
+        paren=str(input("Introduzca la cadena: "))
+        x=[]
+        fm=open('grammar.txt','a+')
+        fm.write("\n\nMODO MANUAL: "+paren+"\n")
+        for p in paren:
+            x.append(p)
+        ROB=['B']
+        fm.write("B")
+        for i in range(len(x)):
+            ROB=Balanceo(x[i],ROB)
+            print(ROB)
+            fm.write("\n")
+            for item in ROB:
+                fm.write("%s" % item)
+        h=ROB.count('R')
+        fm.close()
+        if(len(ROB)>len(x)and h==0):
+            Doesitwork(ROB,x)
+        else:
+            print("Los parentesis no estan balanceados")
+            fm2=open('grammar.txt','a+')
+            fm2.write("\nLos parentesis no estan balanceados")
+            fm2.close()
+        op=input("\n\nm- Manual\na-Automatico\ns-Salir:    ")
+    elif(op=='a'):
+        paren=""
+        largo=randint(0,4)#rand()%1001
+        for i in range(0,largo+1):
+            rand1=randint(0,1)
+            if(rand1==1):
+                paren=paren+')'
+            else:
+                paren=paren+'('
+        print(paren+"\n")
+        x=[]
+        fa=open('grammar.txt','a+')
+        fa.write("\n\nMODO AUTOMATICO: "+paren+"\n")
+        for p in paren:
+            x.append(p)
+        ROB=['B']
+        fa.write("B")
+        print(ROB)
+        for i in range(len(x)):
+            ROB=Balanceo(x[i],ROB)
+            print(ROB)
+            fa.write("\n")
+            for item in ROB:
+                fa.write("%s" % item)
+        h=ROB.count('R')
+        fa.close()
+        if(len(ROB)>len(x)and h==0):
+            Doesitwork(ROB,x)
+        else:
+            print("Los parentesis no estan balanceados")
+            fa2=open('grammar.txt','a+')
+            fa2.write("\nLos parentesis no estan balanceados")
+            fa2.close()
+        op=input("\n\nm- Manual\na-Automatico\ns-Salir:    ")
+    elif(op=='s'):
+        op=='s'#para que se salga automatico
+    else:
+        op=input("\n\nm- Manual\na-Automatico\ns-Salir:    ")
+
+\end{lstlisting}
+
+
+\section{Modo manual}\label{dividing}
+\begin{center}
+\begin{figure}[h]
+\includegraphics[width=1\textwidth]{parenmanual.png} 
+\centering
+\end{figure}
+\end{center}
+
+\section{Modo automático}\label{dividing}
+\begin{center}
+\begin{figure}[h]
+\includegraphics[width=1\textwidth]{parenauto.png} 
+\centering
+\end{figure}
+\end{center}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\chapter{Autómata de Pila}\label{hints}
+\section{Descripción del programa 4}\label{dividing}
+El programa consiste en un autómata de pila que recibirá una cadena de ceros y unos y determinará si tiene la misma cantidad de ceros y unos. Si el autómata recibe un cero, se meterá una X en la pila, si recibe un uno, sacará la X que está en el tope. 
+
+\section{Código del cuarto programa}\label{dividing}
+A continuación se muestra el código del cuarto programa en C++.
+
+
+\lstset{language=C, breaklines=true, basicstyle=\tiny,tabsize=1,frame=single}
+\begin{lstlisting}
+#include <stdio.h>
+#include <stdlib.h>
+#include <cstring>
+
+
+
+struct ana{
+	char dato;
+	struct ana *ptrSig;
+};
+
+struct ana *ptrCab=NULL;
+void meterDato(void);
+void sacarDato(void);
+void mostrarPila(void);
+const int MAX=1000;
+
+int main() {
+int i,j,p,q,m,n,r,o,op,random1,random2,k,opcion,estado;
+int arre[MAX];
+char array[MAX];
+
+
+while(opcion!=3){
+	printf("\n\n1- Para automatico\n2-Para manual\n3-para salir\nElija opcion:  ");
+	scanf("%d",&opcion);
+	switch(opcion){
+	case 1:
+		FILE *ar;
+		ar=fopen("AutoPila.txt","a+");
+		fprintf(ar,"\n\nModo Automatico\n");
+		printf("\n");
+		random1=rand()%1000;//genero la longitud random de ceros
+		random2=rand()%1000;//de unos
+		printf("%d y %d\n",random1, random2);
+		//estado=0;
+		estado=1;
+		k=0;
+		printf("(q%d,",estado);
+		fprintf(ar,"(q%d,",estado);
+		for(r=0;r<random1;r++){
+			arre[r]=0;//genero la cadena de ceros
+			printf("%d",arre[r]);
+			fprintf(ar,"%d",arre[r]);}
+		for(p=0;p<random2;p++){
+			arre[r+p]=1;//concateno los 1
+			printf("%d",arre[r+p]);
+			fprintf(ar,"%d",arre[r+p]);}
+		fclose(ar);
+		mostrarPila();
+		for(i=0;i<(r+p);i++){
+			k++;	
+			if((ptrCab!=NULL || arre[i]==0)){//evaluo cada elemento...
+		        switch(arre[i]){
+		          	case 0:
+		          		estado=1;
+		          		meterDato();
+		        		FILE *arch;
+						arch=fopen("AutoPila.txt","a+");
+		          		printf("(q%d,",estado);
+		          		fprintf(arch,"(q%d,",estado);
+		          		for(m=k;m<(r+p);m++){
+		          			printf("%d",arre[m]);
+		          			fprintf(arch,"%d",arre[m]);
+						  }
+						fclose(arch);
+						  mostrarPila();
+		          		break;
+		          	case 1:
+		          		//ptrCab=NULL; AQUI NO
+		          		sacarDato();
+		        		FILE *archi;
+						archi=fopen("AutoPila.txt","a+");
+		          		if((random1==random2)&&(ptrCab==NULL)){
+		          			estado=3;}
+		          		else{
+		          			estado=2;}
+		          		printf("(q%d,",estado);
+		          		fprintf(archi,"(q%d,",estado);
+		          		for(m=k;m<(r+p);m++){
+		          			printf("%d",arre[m]);
+		          			fprintf(archi,"%d",arre[m]);
+						  }
+						  fclose(archi);
+						  mostrarPila();
+		          		break;
+		          	}}
+		    else{
+			printf("\nNo se puede sacar el vacio");
+			ptrCab=NULL;//es necesario para que no agregue mas X a la pila y truene de una vez...
+			i=r+p+1;}
+		}
+		ptrCab=NULL;//para que truene definitivo...
+		if(estado==3){
+		printf("\nSirve");
+		FILE *archivito;
+		archivito=fopen("AutoPila.txt","a+");
+		fprintf(archivito,"\t\tSIRVE");
+		fclose(archivito);
+		//fprintf(ar,"\nSirve");
+		}
+	break;
+	
+	case 2:///////////////////////////////////////////////////
+		estado=1;
+		k=0;
+		FILE *ar2;
+		ar2=fopen("AutoPila.txt","a+");
+		fprintf(ar2,"\n\nModo Manual:\n");
+		scanf("%s",&array);
+		q=strlen(array);//sirve para saber el largo de la cadena
+		printf("%d\n\n\n",q); 
+
+		printf("(q%d,",estado);
+		fprintf(ar2,"(q%d,",estado);
+		for(r=0;r<q;r++){
+			array[r]=array[r]-48;//casting
+			printf("%d",array[r]);
+			fprintf(ar2,"%d",array[r]);}
+		fclose(ar2);
+		mostrarPila();	
+		
+		for(i=0;i<q;i++){
+			k++;
+			o=k;	
+			if((ptrCab!=NULL || array[i]==0)){//evaluo cada elemento...
+		        switch(array[i]){
+		          	case 0:
+		          		FILE *arch2;
+		          		arch2=fopen("AutoPila.txt","a+");
+		          		estado=1;
+		          		meterDato();
+		          		printf("(q%d,",estado);
+		          		fprintf(arch2,"(q%d,",estado);
+		          		for(m=k;m<q;m++){
+		          			printf("%d",array[m]);
+		          			fprintf(arch2,"%d",array[m]);
+						  }
+						  fclose(arch2);
+						  mostrarPila();
+		          		break;
+		          	case 1:
+		          		FILE *archi2;
+		          		archi2=fopen("AutoPila.txt","a+");
+		          		sacarDato();
+		          		if((o==q)&&(ptrCab==NULL)){//compara que ya se hayan leido tantos caracteres como el largo de la cadena
+		          			estado=3;}
+		          		else{
+		          			estado=2;}
+		          		printf("(q%d,",estado);
+		          		fprintf(archi2,"(q%d,",estado);
+		          		for(m=k;m<q;m++){
+		          			printf("%d",array[m]);
+		          			fprintf(archi2,"%d",array[m]);
+						  }
+						  fclose(archi2);
+						  mostrarPila();
+		          		break;
+		          	}}
+		    else{
+			printf("\nNo se puede sacar el vacio, truena");
+			ptrCab=NULL;//es necesario para que no agregue mas X a la pila y truene de una vez...
+			i=q;}
+			////////////////////////////////////////////
+		}
+		ptrCab=NULL;//para que truene definitivo...		
+		if(estado==3){
+		FILE *archivito2;
+		archivito2=fopen("AutoPila.txt","a+");
+		printf("\nSIRVE");
+		fprintf(archivito2,"\t\tSIRVE");
+		fclose(archivito2);}
+		break;
+
+		}
+}
+
+
+}
+
+void meterDato(void){
+	struct ana *ptrNew;
+	ptrNew=(struct ana *)malloc(sizeof(struct ana));
+	ptrNew->dato='X';
+	ptrNew->ptrSig=NULL;
+	if (ptrCab==NULL){//si lista vacia
+	ptrCab=ptrNew;
+}
+	else{
+	ptrNew->ptrSig=ptrCab;//el ptrNew Siguiente, toma el valor que hay en la cima... 
+	ptrCab=ptrNew;	//mientras que ptrCab toma el valor de ptrNew
+}
+}
+
+void sacarDato(void){
+if (ptrCab==NULL){
+	printf("\nesta vacio, no puede sacar nada, truena\n");
+}
+else{
+	//printf("\nEl dato sacado es: %c\n",ptrCab->dato); codigo viejo
+	ptrCab=ptrCab->ptrSig;
+}
+
+}
+
+
+void mostrarPila(void){
+FILE *arc;
+arc=fopen("AutoPila.txt","a+");
+struct ana *ptrAna;
+ptrAna=ptrCab;
+printf(",");
+fprintf(arc,",");
+if (ptrCab==NULL){
+	printf("Z0),");
+	fprintf(arc,"Z0),");
+}
+else{
+while(ptrAna!=NULL){
+printf("%c",ptrAna->dato);
+fprintf(arc,"%c",ptrAna->dato);
+ptrAna=ptrAna->ptrSig;
+}
+printf("Z0),");
+fprintf(arc,"Z0),");
+}
+
+fclose(arc);
+
+}
+
+
+\end{lstlisting}
+
+\section{Resultados del modo manual}\label{dividing}
+\begin{center}
+\begin{figure}[h!]
+\includegraphics[width=1\textwidth]{autopilamanual.png} 
+\centering
+\end{figure}
+\end{center}
+
+\section{Resultado del modo automático}\label{dividing}
+\begin{center}
+\begin{figure}[h!]
+\includegraphics[width=1\textwidth]{autopilauto.png} 
+\centering
+\end{figure}
+\end{center}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\chapter{Máquina de Turing}\label{hints}
+\section{Descripción del programa 5}\label{dividing}
+La máquina de Turing es un autómata finito, esta máquina en específico aceptará cualquier cadena que cumpla con el lenguaje:
+
+\lstset{basicstyle=\large,tabsize=1,frame=none}
+\begin{lstlisting}
+
+			{0n1n | n>=1}
+			
+\end{lstlisting}
+
+Es decir que no aceptará la cadena vacía, mínimo debe haber un 01.
+Al igual que en los programas anteriores hay un modo automático y otro manual. En el modo automático, se generará una cadena aleatoria de ceros y unos, mientras que en el modo manual se introducirá desde la cónsola. Al final, los resultados se enviarán a un archivo para guardarlos.
+
+\section{Código del quinto programa}\label{dividing}
+A continuación se muestra el código del quinto programa en python.
+\lstset{language=Python, breaklines=true, basicstyle=\tiny,tabsize=1,frame=single}
+\begin{lstlisting}
+
+from random import randint
+
+
+op=str(input("m-Manual\na-Automatico\ns-Salir:     "))
+while(op!='s'):
+    if(op=='m'):
+        c=open('machina.txt','a+')
+        c.write("\n\nMODO MANUAL: ")
+        cad1=[]
+        cad3=""
+        estado=0
+        boo=True
+        CAD=str(input("Introduzca la cadena: "))
+        for i in CAD:
+            cad3=cad3+i
+            cad1.append(i)
+        c.write(cad3+"\n")
+        if(cad1==[]):
+            print("La maquina no lo acepta")
+            c.write("La maquina no lo acepta")
+        else:    
+            print("q"+str(estado))
+            c.write("q"+str(estado)+"-|")
+            print(cad1)
+        j=0#lleva el indice
+        while(boo!=False):
+            if(estado==0):
+                if(cad1[j]=='0'):
+                    cad1[j]='x'
+                    estado=1
+                    if(j==len(cad1)-1):
+                        print("(q"+str(estado)+",x,R)")
+                        c.write("(q"+str(estado)+",x,R)")
+                        print(cad1)
+                        print("Truena\n")
+                        c.write("\nTruena\n")
+                        boo=False
+                    else:
+                        j=j+1
+                        print("(q"+str(estado)+",x,R)")
+                        c.write("(q"+str(estado)+",x,R)->")
+                        print(cad1)
+                elif(cad1[j]=='y'):
+                    estado=3
+                    if(j==len(cad1)-1):
+                        print("(q"+str(estado)+",y,R)")
+                        c.write("(q"+str(estado)+",y,R)->")
+                        print(cad1)
+                else:
+                    print("truena\n")
+                    c.write("\ntruena\n")
+                    boo=False
+            elif(estado==1):
+                if(cad1[j]=='0'):
+                    #estado=1
+                    if(j==len(cad1)-1):
+                        print("(q"+str(estado)+",0,R)")
+                        c.write("(q"+str(estado)+",0,R)")
+                        print(cad1)
+                        print("Truena\n")
+                        c.write("\nTruena\n")
+                        boo=False
+                    else:
+                        j=j+1
+                        print("(q"+str(estado)+",0,R)")
+                        c.write("(q"+str(estado)+",0,R)->")
+                        print(cad1)
+                elif(cad1[j]=='1'):
+                    cad1[j]='y'
+                    estado=2
+                    j=j-1
+                    print("(q"+str(estado)+",y,L)")
+                    c.write("(q"+str(estado)+",y,L)->")
+                    print(cad1)
+                elif(cad1[j]=='y'):
+                    #estado=1
+                    if(j==len(cad1)-1):
+                        print("(q"+str(estado)+",y,R)")
+                        c.write("(q"+str(estado)+",y,R)")
+                        print(cad1)
+                        print("Truena\n")
+                        c.write("\nTruena\n")
+                        boo=False
+                    else:
+                        j=j+1
+                        print("(q"+str(estado)+",y,R)")
+                        c.write("(q"+str(estado)+",y,R)->")
+                        print(cad1)
+                else:
+                    print("truena\n")
+                    c.write("\ntruena\n")
+                    boo=False
+            elif(estado==2):
+                if(cad1[j]=='0'):
+                    #estado=2
+                    j=j-1
+                    print("(q"+str(estado)+",0,L)")
+                    c.write("(q"+str(estado)+",0,L)->")
+                    print(cad1)
+                elif(cad1[j]=='x'):
+                    estado=0
+                    j=j+1
+                    print("(q"+str(estado)+",x,R)")
+                    c.write("(q"+str(estado)+",x,R)->")
+                    print(cad1)
+                elif(cad1[j]=='y'):
+                    estado=2
+                    j=j-1
+                    print("(q"+str(estado)+",y,L)")
+                    c.write("(q"+str(estado)+",y,L)->")
+                    print(cad1)
+                else:
+                    print("truena\n")
+                    c.write("\ntruena\n")
+                    boo=False
+            elif(estado==3):
+                if(cad1[j]=='y'):
+                    if(j==len(cad1)-1):
+                        if((('0' in cad1) or ('1' in cad1))!=False):#si hay un 1 o un 0
+                            print("Truena\n")
+                            c.write("\nTruena\n")
+                            boo=False
+                        else:
+                            estado=4
+                            print("(q"+str(estado)+",B,R)")
+                            c.write("(q"+str(estado)+",B,R)")
+                            print(cad1)
+                            print("SIRVE\n")
+                            c.write("\nSIRVE\n")
+                            boo=False
+                    else:
+                        j=j+1
+                        print("(q"+str(estado)+",y,R)")
+                        c.write("(q"+str(estado)+",y,R)->")
+                        print(cad1)
+                else:
+                    #si recibe cualquier cosa que no sea y o B
+                    print("Truena\n")
+                    c.write("\ntruena\n")
+                    boo=False
+        c.close()
+        op=str(input("m-Manual\na-Automatico\ns-Salir:     "))
+    elif(op=='a'):########################################################################
+        random1=randint(0,3)
+        cad2=[]
+        cad3=""#quiero que se vea en la lista y no puedo mandar listas...
+        boo=True
+        j=0
+        estado=0
+        for i in range(0,random1):
+            b=randint(0,1)
+            cad3=cad3+str(b)
+            cad2.append(str(b))
+        #print("\n"+str(random1))
+        f=open('machina.txt','a+')
+        f.write("\n\nMODO AUTOMATICO: ")
+        if(cad2==[]):
+            print("vacio... La maquina no lo acepta")
+            f.write("\nvacio... La maquina no lo acepta")
+        else:    
+            print("q"+str(estado))
+            print(cad2)
+            f.write(cad3+"\n")
+            f.write("q"+str(estado)+"->")
+        while(boo!=False):
+            if(estado==0):
+                if(cad2[j]=='0'):
+                    cad2[j]='x'
+                    estado=1
+                    if(j==len(cad2)-1):
+                        print("(q"+str(estado)+",x,R)")
+                        print(cad2)
+                        print("Truena\n")
+                        f.write("(q"+str(estado)+",x,R)")
+                        f.write("\nTruena\n")
+                        boo=False
+                    else:
+                        j=j+1
+                        print("(q"+str(estado)+",x,R)")
+                        f.write("(q"+str(estado)+",x,R)->")
+                        print(cad2)
+                elif(cad2[j]=='y'):
+                    estado=3
+                    if(j==len(cad2)-1):
+                        print("(q"+str(estado)+",y,R)")
+                        f.write("(q"+str(estado)+",y,R)->")
+                        print(cad2)
+                else:
+                    print("truena\n")
+                    f.write("truena\n")
+                    boo=False
+            elif(estado==1):
+                if(cad2[j]=='0'):
+                    #estado=1
+                    if(j==len(cad2)-1):
+                        print("(q"+str(estado)+",0,R)")
+                        print(cad2)
+                        print("Truena\n")
+                        f.write("(q"+str(estado)+",0,R)")
+                        f.write("\nTruena\n")
+                        boo=False
+                    else:
+                        j=j+1
+                        print("(q"+str(estado)+",0,R)")
+                        f.write("(q"+str(estado)+",0,R)->")
+                        print(cad2)
+                elif(cad2[j]=='1'):
+                    cad2[j]='y'
+                    estado=2
+                    j=j-1
+                    print("(q"+str(estado)+",y,L)")
+                    f.write("(q"+str(estado)+",y,L)->")
+                    print(cad2)
+                elif(cad2[j]=='y'):
+                    #estado=1
+                    if(j==len(cad2)-1):
+                        print("(q"+str(estado)+",y,R)")
+                        f.write("(q"+str(estado)+",y,R)")
+                        print(cad2)
+                        print("Truena\n")
+                        f.write("\nTruena\n")
+                        boo=False
+                    else:
+                        j=j+1
+                        print("(q"+str(estado)+",y,R)")
+                        f.write("(q"+str(estado)+",y,R)->")
+                        print(cad2)
+                else:
+                    print("truena\n")
+                    f.write("\ntruena\n")
+                    boo=False
+            elif(estado==2):
+                if(cad2[j]=='0'):
+                    #estado=2
+                    j=j-1
+                    print("(q"+str(estado)+",0,L)")
+                    f.write("(q"+str(estado)+",0,L)->")
+                    print(cad2)
+                elif(cad2[j]=='x'):
+                    estado=0
+                    j=j+1
+                    print("(q"+str(estado)+",x,R)")
+                    f.write("(q"+str(estado)+",x,R)->")
+                    print(cad2)
+                elif(cad2[j]=='y'):
+                    estado=2
+                    j=j-1
+                    print("(q"+str(estado)+",y,L)")
+                    f.write("(q"+str(estado)+",y,L)->")
+                    print(cad2)
+                else:
+                    print("truena\n")
+                    f.write("\ntruena\n")
+                    boo=False
+            elif(estado==3):
+                if(cad2[j]=='y'):
+                    if(j==len(cad2)-1):
+                        if((('0' in cad2) or ('1' in cad2))!=False):#si hay un 1 o un 0
+                            print("Truena\n")
+                            f.write("\ntruena\n")
+                            boo=False
+                        else:
+                            estado=4
+                            print("(q"+str(estado)+",B,R)")
+                            f.write("(q"+str(estado)+",B,R)")
+                            print(cad2)
+                            print("SIRVE\n")
+                            f.write("\nSIRVE\n")
+                            boo=False
+                    else:
+                        j=j+1
+                        print("(q"+str(estado)+",y,R)")
+                        f.write("(q"+str(estado)+",y,R)->")
+                        print(cad2)
+                else:
+                    #si recibe cualquier cosa que no sea y o B
+                    print("Truena\n")
+                    f.write("\ntruena\n")
+                    boo=False
+
+        f.close()
+
+        op=str(input("m-Manual\na-Automatico\ns-Salir:     "))
+    else:
+        op=str(input("m-Manual\na-Automatico\ns-Salir:     "))
+
+\end{lstlisting}
+
+%\lstset{basicstyle=\large,tabsize=1,frame=none}
+\section{Modo manual de la máquina}\label{dividing}
+\begin{center}
+\begin{figure}[h!]
+\includegraphics[width=1\textwidth]{machinamanual.png} 
+\centering
+\end{figure}
+\end{center}
+
+\section{Modo automático de la máquina}\label{dividing}
+\begin{center}
+\begin{figure}[h!]
+\includegraphics[width=1\textwidth]{automachina.png} 
+\centering
+\end{figure}
+\end{center}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\chapter{Strange Planets}\label{hints}
+\section{Descripción del programa 6}\label{dividing}
+Hay unos planetas muy extraños con solo 3 tipos de habitantes, a,b y c, donde para que nazcan 2 habitantes de una especie deben morir uno de cada una de las otras especies, de hecho, esa es la única forma de que nazca un nuevo habitante de esa especie. Si nacen dos a, muere un b y muere un c, a esto se le llama a-Event, b-Event o c-Event.
+
+El objetivo del programa es que determine qué planetas estan destinados a fallar en vista de la distribución de sus habitantes. 
+
+\lstset{basicstyle=\large,tabsize=1,frame=none}
+
+\section{Código del sexto programa}\label{dividing}
+A continuación se muestra el código del sexto programa en python.
+\lstset{language=Python, breaklines=true, basicstyle=\tiny,tabsize=1,frame=single}
+\begin{lstlisting}
+
+from random import randint
+
+
+def aEvent(pipol):
+    pipol[0]=pipol[0]+2
+    pipol[1]=pipol[1]-1
+    pipol[2]=pipol[2]-1
+    return pipol
+
+def bEvent(pipol):
+    pipol[0]=pipol[0]-1
+    pipol[1]=pipol[1]+2
+    pipol[2]=pipol[2]-1
+    return pipol
+
+def cEvent(pipol):
+    pipol[0]=pipol[0]-1
+    pipol[1]=pipol[1]-1
+    pipol[2]=pipol[2]+2
+    return pipol
+
+def probandoPT(PT):
+    moves=0
+    if(PT==3):
+        moves=1
+    elif(PT==6):
+        moves=5
+    elif(PT==9):
+        moves=12
+    elif(PT==12):#####
+        moves=25
+    elif(PT==15):
+        moves=35
+        pass
+    else:
+        print("asfasf")
+    return moves
+
+def probando(pipol,PT,piAux):
+    extincion=False
+    loop=False
+    a=0
+    b=0
+    c=0
+    d=0
+    e=0
+    f=0
+    if(PT==3 or PT==6 or PT==9 or PT==12 or PT==15):
+        a=b=c=probandoPT(PT)
+    else:
+        a=b=c=PT*2
+    while(extincion!=True):
+        while(loop!=True or extincion!=True):
+            if((pipol[0]==0 and pipol[1]==0)or(pipol[1]==0 and pipol[2]==0)or(pipol[0]==0 and pipol[2]==0)):
+                extincion=True
+                loop=True# para que se detenga de una vez
+                print("El planeta falla :D")
+                c=open('Planetas.txt','a+')
+                c.write("\nEl planeta falla :D\n\n")
+                c.close()
+            elif(pipol[0]==0):#a event
+                d=d+1
+                print(aEvent(pipol))
+                imprimir(pipol)
+                if(pipol==piAux):
+                    loop=True
+                    if(d>=a or e>=b or f>=c):
+                        extincion=True# es la peor mentira porque en realidad en esta condicion nunca se extingue... pero es para que termine de correr
+                        print("No fallara nunca")
+                        c=open('Planetas.txt','a+')
+                        c.write("\nNo fallara nunca\n\n")
+                        c.close()
+            elif(pipol[1]==0):#b event
+                e=e+1
+                print(bEvent(pipol))
+                imprimir(pipol)
+                if(pipol==piAux):
+                    loop=True
+                    if(d>=a or e>=b or f>=c):
+                        extincion=True#mentira
+                        print("No fallara nunca")
+                        c=open('Planetas.txt','a+')
+                        c.write("\nNo fallara nunca\n\n")
+                        c.close()
+            elif(pipol[2]==0):#c event
+                f=f+1
+                print(cEvent(pipol))
+                imprimir(pipol)
+                if(pipol==piAux):
+                    loop=True
+                    if(d>=a or e>=b or f>=c):
+                        extincion=True#mentira
+                        print("No fallara nunca")
+                        c=open('Planetas.txt','a+')
+                        c.write("\nNo fallara nunca\n\n")
+                        c.close()
+            else:###################################################### si a=b o b=c o a=c.... else lo que sigue... que es random...
+                if(pipol[1]==pipol[2]):# b=c -> a event
+                    d=d+1
+                    print(aEvent(pipol))
+                    imprimir(pipol)
+                    if(pipol==piAux):
+                        loop=True
+                        if(d>=a or e>=b or f>=c):
+                            extincion=True#mentira
+                            print("No fallara nunca")
+                            c=open('Planetas.txt','a+')
+                            c.write("\nNo fallara nunca\n\n")
+                            c.close()
+                elif(pipol[0]==pipol[2]):# a=c -> b event
+                    e=e+1
+                    print(bEvent(pipol))
+                    imprimir(pipol)
+                    if(pipol==piAux):
+                        loop=True
+                        if(d>=a or e>=b or f>=c):
+                            extincion=True#
+                            print("No fallara nunca")
+                            c=open('Planetas.txt','a+')
+                            c.write("\nNo fallara nunca\n\n")
+                            c.close()
+                elif(pipol[0]==pipol[1]):# a=b -> c Event
+                    f=f+1
+                    print(cEvent(pipol))
+                    imprimir(pipol)
+                    if(pipol==piAux):
+                        loop=True
+                        if(d>=a or e>=b or f>=c):
+                            extincion=True#mentira
+                            print("No fallara nunca")
+                            c=open('Planetas.txt','a+')
+                            c.write("\nNo fallara nunca\n\n")
+                            c.close()
+                else:
+                    random=randint(1,3)
+                    if(random==1):# a event
+                        d=d+1
+                        print(aEvent(pipol))
+                        imprimir(pipol)
+                        if(pipol==piAux):
+                            loop=True
+                            if(d>=a or e>=b or f>=c):
+                                extincion=True#mentira
+                                print("No fallara nunca")
+                                c=open('Planetas.txt','a+')
+                                c.write("\nNo fallara nunca\n\n")
+                                c.close()
+                    elif(random==2):#b event
+                        e=e+1
+                        print(bEvent(pipol))
+                        imprimir(pipol)
+                        if(pipol==piAux):
+                            loop=True
+                            if(d>=a or e>=b or f>=c):
+                                extincion=True#
+                                print("No fallara nunca")
+                                c=open('Planetas.txt','a+')
+                                c.write("\nNo fallara nunca\n\n")
+                                c.close()
+                    else:# c event
+                        f=f+1
+                        print(cEvent(pipol))
+                        imprimir(pipol)
+                        if(pipol==piAux):
+                            loop=True
+                            if(d>=a or e>=b or f>=c):
+                                extincion=True#mentira
+                                print("No fallara nunca")
+                                c=open('Planetas.txt','a+')
+                                c.write("\nNo fallara nunca\n\n")
+                                c.close()
+
+def imprimir(pipol):#poner cada vez que se imprime un pipol
+    f=open('Planetas.txt','a+')
+    cad=" -> ("
+    for i in pipol:
+        cad=cad+str(i)+","
+    cad=cad+")"
+    f.write(cad)
+    f.close()
+
+op=str(input("\nm-Manual.\na-Automatico.\ng-Informacion general sobre los planetas.\ns-Salir: "))
+while(op!='s'):
+    if(op=='m'):
+        c=open('Planetas.txt','a+')
+        c.write("\n\nMODO MANUAL\n")
+        c.close()
+        PT=int(input("Introduzca la poblacion total n: "))
+        for i in range(0,PT+1):
+            for j in range(0,PT+1):
+                for k in range(0,PT+1):
+                    if((i+j+k)==PT):
+                        pipol=[]
+                        piAux=[]
+                        pipol.append(i)
+                        pipol.append(j)
+                        pipol.append(k)
+                        piAux.append(i)
+                        piAux.append(j)
+                        piAux.append(k)
+                        print("\n.. .. .. .. .. .. .. .. .. .. .. .. ")
+                        print(pipol)
+                        imprimir(pipol)
+                        probando(pipol,PT,piAux)
+        op=str(input("\nm-Manual.\na-Automatico.\ng-Informacion general sobre los planetas.\ns-Salir: "))
+    elif(op=='a'):
+        c=open('Planetas.txt','a+')
+        c.write("\n\nMODO AUTOMATICO\n")
+        c.close()
+        PT=randint(1,15)
+        for i in range(0,PT+1):
+            for j in range(0,PT+1):
+                for k in range(0,PT+1):
+                    if((i+j+k)==PT):
+                        pipol=[]
+                        piAux=[]
+                        pipol.append(i)
+                        pipol.append(j)
+                        pipol.append(k)
+                        piAux.append(i)
+                        piAux.append(j)
+                        piAux.append(k)
+                        print("\n.. .. .. .. .. .. .. .. .. .. .. .. ")
+                        print(pipol)
+                        imprimir(pipol)
+                        probando(pipol,PT,piAux)
+        op=str(input("\nm-Manual.\na-Automatico.\ng-Informacion general sobre los planetas.\ns-Salir: "))
+    elif(op=='s'):
+        op='s'
+    elif(op=='g'):
+        print("\n\n  En general, los planetas de 2,4,5,7,8,10,11 y 13 y 14 estan destinados a fallar todos")
+        print("  Planetas cuya cantidad de habitantes es multiplo de 3, hay 3 posibilidades:")
+        print("Si todas las combinaciones las agrupara en planetas, 2 planetas nunca fallaran y 1 si,")
+        print("...ese ultimo tiene las tres maneras de fallar en un solo planeta, y este programa")
+        print("busca la manera mas rapida de llegar a cualquiera de esas opciones")
+        print("  Pareciera que cuando la cantidad de habitantes es multiplo unicamente de numeros que ")
+        print("siempre fallan, Ese planeta esta destinado a fallar tambien... se puede ver como")
+        print("que los planetas con pocos habitantes son la representacion en pequegno de un gran conjunto")
+        
+        op=str(input("\nm-Manual.\na-Automatico.\ng-Informacion general sobre los planetas.\ns-Salir: "))
+    else:
+        op=str(input("\nm-Manual.\na-Automatico.\ng-Informacion general sobre los planetas.\ns-Salir: "))
+
+
+
+\end{lstlisting}
+
+%\lstset{basicstyle=\large,tabsize=1,frame=none}
+\section{Modo manual}\label{dividing}
+\begin{center}
+\begin{figure}[h!]
+\includegraphics[width=1\textwidth]{planetamanual.png} 
+\centering
+\end{figure}
+\end{center}
+
+\section{Modo automático}\label{dividing}
+\begin{center}
+\begin{figure}[h!]
+\includegraphics[width=1\textwidth]{planetautomatico.png} 
+\centering
+\end{figure}
+\end{center}
+\end{document}
